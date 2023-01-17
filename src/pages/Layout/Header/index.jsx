@@ -1,5 +1,4 @@
 import React from "react";
-import { LogoSvg } from "../../components/Svg";
 import Language from "./Language";
 import Nav from "./Nav";
 import "./style.scss";
