@@ -1,0 +1,39 @@
+.language {
+  display: flex;
+  align-items: center;
+
+  &.up .language__icon-container {
+    svg {
+      stroke: var(--primary-forth);
+    }
+  }
+
+  &.up .language__text {
+    color: var(--primary-forth);
+  }
+}
+
+.language__icon-container {
+  position: relative;
+  width: 1.625rem;
+  margin-right: 0.605rem;
+
+  &::before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+  }
+
+  svg {
+    stroke: var(--primary);
+  }
+}
+
+.language__text {
+  color: var(--primary);
+
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.22;
+  text-transform: uppercase;
+}

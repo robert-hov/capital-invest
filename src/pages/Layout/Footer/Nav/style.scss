@@ -1,0 +1,28 @@
+@import "../../../../theme/mixins.scss";
+
+.footer__nav {
+  display: flex;
+  list-style-type: none;
+  margin-bottom: 2rem;
+}
+
+.footer__nav-item {
+  &:not(:last-child) {
+    margin-right: 4.375rem;
+  }
+}
+
+.footer__nav-link {
+  position: relative;
+
+  color: var(--primary);
+
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.5;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+
+  @include nav-links(var(--primary));
+}

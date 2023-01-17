@@ -1,0 +1,45 @@
+@import "../../../../theme/mixins.scss";
+
+.nav {
+  width: 70%;
+  margin: 0 5.937rem;
+
+  &.down {
+    &__link {
+      color: black;
+    }
+  }
+}
+
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.nav__link {
+  position: relative;
+  color: #fff;
+  transition: color 500ms;
+
+  font-family: helveticaNeue;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 3px;
+  text-decoration: none;
+  text-transform: uppercase;
+  @include nav-links(var(--primary));
+}
+
+.nav.up:not(.top) .nav__link {
+  color: var(--primary-forth);
+
+  @include nav-links(var(--primary-third));
+
+  &:hover {
+    color: var(--primary-third);
+  }
+}
+
+

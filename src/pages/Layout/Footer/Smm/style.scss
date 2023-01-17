@@ -1,0 +1,22 @@
+.footer__smm {
+  display: flex;
+  list-style-type: none;
+}
+
+.footer__smm-item {
+  &:not(:last-child) {
+    margin-right: 0.625rem;
+  }
+}
+
+.footer__smm-link {
+  position: relative;
+  display: block;
+  width: 1.375rem;
+
+  &::before {
+    content: '';
+    display: block;
+    padding-top: 100%;
+  }
+}
