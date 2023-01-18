@@ -1,0 +1,63 @@
+@import "../../../theme/mixins.scss";
+
+.partners {
+  padding-top: 1.75rem;
+  padding-bottom: 7.062rem;
+
+  background-color: var(--primary-second);
+}
+
+
+.partners__title {
+  @include section-title(var(--primary), 5.375rem);
+}
+
+.partners__container {
+  display: flex;
+  justify-content: center;
+}
+
+.partners__icons {
+  display: flex;
+  justify-content: space-between;
+  width: 75.277%;
+  min-width: 67.75rem;
+}
+
+.partners__icon {
+  position: relative;
+
+  &::before {
+    content: '';
+    display: block;
+  }
+
+  &--abb {
+    width: 12.962%;
+    &::before {
+      padding-top: 29.285%;
+    }
+  }
+
+  &--shin,
+  &--legal{
+    width: 10.185%;
+    &::before {
+      padding-top: 68.181%;
+    }
+  }
+
+  &--tsaghkadzor {
+    width: 14.629%;
+    &::before {
+      padding-top: 50%;
+    }
+  }
+
+  &--dilijan {
+    width: 13.888%;
+    &::before {
+      padding-top: 34%;
+    }
+  }
+}

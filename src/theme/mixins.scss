@@ -196,10 +196,11 @@
 
   span {
     @extend %font-title;
+    color: $color;
     margin-bottom: 1.687rem;
   }
   div {
     width: 3.75rem;
-    border-top: 1px solid var(--primary-sixth);
+    border-top: 1px solid $color;
   }
 }

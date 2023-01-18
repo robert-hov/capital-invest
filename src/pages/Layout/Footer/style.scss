@@ -10,6 +10,7 @@
 .footer__container {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 2.812rem;
 }
 
 .footer__logo {
@@ -41,4 +42,15 @@
   text-transform: uppercase;
   letter-spacing: 3px;
   text-align: right;
+}
+
+.footer__copyright-text {
+  opacity: 60%;
+
+  color: var(--primary);
+
+  font-family: montserrat, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.219rem;
 }

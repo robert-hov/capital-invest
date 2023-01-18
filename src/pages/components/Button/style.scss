@@ -4,11 +4,16 @@
   @include btn-animation;
   // border: none;
   display: inline-block;
-
-  font-size:  0.875rem;
+  border: none;
+  font-size: 0.875rem;
   font-weight: 600;
   line-height: 1.5;
   text-decoration: none;
   text-transform: uppercase;
+  letter-spacing: 4.6px;
   background-color: transparent;
+
+  &--black {
+    @include btn-animation(var(--primary-sixth))
+  }
 }

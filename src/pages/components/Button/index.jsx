@@ -2,21 +2,21 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./style.scss";
 
-const Button = ({ text, click, link }) => {
+const Button = ({ color, text, click, link }) => {
   return (
     <>
       {link ? (
-        <Link className="btn" to={link} onClick={click}>
+        <Link className={`btn${color ? ' btn--' + color : ''}`} to={link} onClick={click}>
           <span className="btn__text">
             <span>{text}</span>
           </span>
         </Link>
       ) : (
-        <span className="btn" onClick={click}>
+        <button className={`btn${color ? ' btn--' + color : ''}`} onClick={click}>
           <span className="btn__text">
             <span>{text}</span>
           </span>
-        </span>
+        </button>
       )}
     </>
   );

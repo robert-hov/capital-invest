@@ -28,6 +28,11 @@ const Footer = (props) => {
             </span>
           </div>
         </div>
+        <div className="footer__copyright">
+          <span className="footer__copyright-text">
+          © Copyright Capital Invest Group LLC 2023
+          </span>
+        </div>
       </div>
     </footer>
   );
