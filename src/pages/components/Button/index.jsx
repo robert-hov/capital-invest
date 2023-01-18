@@ -12,10 +12,11 @@ const Button = ({ text, click, link }) => {
           </span>
         </Link>
       ) : (
-        <button className="btn" onClick={click}>
-          <span className="btn__text"></span>
-          {text}
-        </button>
+        <span className="btn" onClick={click}>
+          <span className="btn__text">
+            <span>{text}</span>
+          </span>
+        </span>
       )}
     </>
   );

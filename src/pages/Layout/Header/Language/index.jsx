@@ -1,5 +1,4 @@
 import React from "react";
-import { LanguageSvg } from "../../../components/Svg";
 import "./style.scss";
 
 const Language = ({ down }) => {
@@ -11,10 +10,9 @@ const Language = ({ down }) => {
     >
       <div className="language__icon-container">
         <div className="img-container">
-          <svg class="icon">
+          <svg className="icon">
             <use xlinkHref="#language" />
           </svg>
-          <LanguageSvg className="language__icon" color="var(--primary)" />
         </div>
       </div>
       <div className="language__text">En</div>

@@ -2,6 +2,7 @@
 
 .btn {
   @include btn-animation;
+  // border: none;
   display: inline-block;
 
   font-size:  0.875rem;
@@ -9,4 +10,5 @@
   line-height: 1.5;
   text-decoration: none;
   text-transform: uppercase;
+  background-color: transparent;
 }

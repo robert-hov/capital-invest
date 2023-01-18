@@ -22,6 +22,10 @@
     display: block;
     padding-top: 61.224%;
   }
+
+  svg {
+    fill: var(--primary);
+  }
 }
 
 .footer__right {

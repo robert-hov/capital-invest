@@ -19,7 +19,7 @@ const Header = () => {
           <div className="header__container">
             <a href="/" className="header__logo-container">
               <div className="img-container">
-                <svg class="icon">
+                <svg className="icon">
                   <use xlinkHref="#logo" />
                 </svg>
               </div>
