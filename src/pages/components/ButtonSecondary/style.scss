@@ -1,4 +1,5 @@
 @import "../../../theme/mixins.scss";
+@import "../../../theme/variables.scss";
 
 .button-secondary {
   display: flex;
@@ -6,12 +7,9 @@
   padding-top: 1.562rem;
   padding-bottom: 1.562rem;
   text-decoration: none;
-  @include btn-link;
+  @include btn-link($primary);
   transition: background-color 300ms;
-
-  &:hover {
-    background-color: var(--primary-fifth);
-  }
+  background-color: var(--primary-sixth);
 }
 
 .button-secondary__text {
@@ -19,7 +17,7 @@
   transform: translateX(1.9em);
   transition: transform 0.4s ease, -webkit-transform 0.4s ease;
 
-  color: var(--primary-third);
+  color: var(--primary);
 
   font-family: helveticaNeue, sans-serif;
   font-size: 0.875rem;
@@ -33,7 +31,7 @@
     left: -3rem;
     height: 1px;
     width: 3.5em;
-    background-color: var(--primary-third);
+    background-color: var(--primary);
     -webkit-transition: all 0.25s ease;
     transition: all 0.25s ease;
   }

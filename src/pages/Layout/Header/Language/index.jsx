@@ -5,7 +5,7 @@ const Language = ({ down }) => {
   return (
     <div
       className={`language ${down === "down" ? "down" : "up"} ${
-        down === "top" ? "top" : null
+        down === "top" ? "top" : ""
       }`}
     >
       <div className="language__icon-container">

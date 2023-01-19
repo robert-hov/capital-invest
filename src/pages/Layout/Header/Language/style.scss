@@ -2,13 +2,13 @@
   display: flex;
   align-items: center;
 
-  &.up .language__icon-container {
+  &.up:not(.top) .language__icon-container {
     svg {
       stroke: var(--primary-forth);
     }
   }
 
-  &.up .language__text {
+  &.up:not(.top) .language__text {
     color: var(--primary-forth);
   }
 }

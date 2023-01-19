@@ -25,7 +25,7 @@ const Header = () => {
               </div>
             </a>
             <Nav down={scrollDirection} content={nav} />
-            <Language down={scrollDirection === "down"} />
+            <Language down={scrollDirection} />
           </div>
         </div>
       </header>

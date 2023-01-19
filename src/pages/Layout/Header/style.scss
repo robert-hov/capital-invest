@@ -19,12 +19,12 @@
     background-color: transparent;
   }
 
-  &.up {
+  &.up:not(.top) {
     background-color: white;
     box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
   }
 
-  &.up .header__logo-container svg {
+  &.up:not(.top) .header__logo-container svg {
     fill: var(--primary-forth);
   }
 }
@@ -52,5 +52,9 @@
 
   svg {
     fill: var(--primary);
+  }
+
+  &:hover {
+    opacity: .7;
   }
 }

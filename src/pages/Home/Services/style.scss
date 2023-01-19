@@ -6,5 +6,5 @@
 }
 
 .services__title {
-  @include section-title(var(--primary-sixth, 2.812rem));
+  @include section-title(var(--primary-sixth), 2.812rem);
 }
