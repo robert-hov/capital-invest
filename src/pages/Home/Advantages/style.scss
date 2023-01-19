@@ -6,7 +6,7 @@
 }
 
 .advantages__title {
-  @include section-title(var(--primary-sixth), 6.25rem)
+  @include section-title(var(--primary-sixth), 6.25rem);
 }
 
 .advantages__content {
@@ -27,7 +27,7 @@
 .advantages__text {
   color: var(--primary-sixth);
 
-  font-family: helveticaNeue;
+  font-family: var(--primary-font);
   font-size: 1.562rem;
   font-weight: 300;
   line-height: 1.208;
@@ -40,7 +40,7 @@
   width: 55.384%;
 
   &::before {
-    content: '';
+    content: "";
     display: block;
     padding-top: 63.611%;
   }

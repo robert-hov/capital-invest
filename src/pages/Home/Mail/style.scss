@@ -1,3 +1,5 @@
+@import "../../../theme/extends.scss";
+
 .mail {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
@@ -10,12 +12,8 @@
 
   color: var(--primary-sixth);
 
-  font-family: helveticaNeue;
-  font-size: 2rem;
-  font-weight: 300;
-  line-height: 1.5;
-  letter-spacing: 6.4px;
-  text-transform: uppercase;
+  @extend %font-title;
+  text-align: left;
 }
 
 .mail__form {
@@ -24,7 +22,6 @@
   align-items: center;
 
   width: 100%;
-
 }
 
 .mail__form-inputs {

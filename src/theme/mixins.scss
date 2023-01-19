@@ -148,49 +148,52 @@
   }
 }
 
+@mixin btn-link($color: var(--primary-third)) {
+  > span {
+    color: $color;
+    //margin-left: 4.2em;
+    //transform: translateX(4.2em);
+    > span {
+      display: inline-block;
+      transform: translateX(1.9em);
+      transition: transform 0.4s ease;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: -3em;
+      height: 1px;
+      width: 3.5em;
+      background-color: $color;
+      transition: all 0.25s ease;
+    }
 
-@mixin btn-link($color: var(--primary-third)){
-  color: $color;
-  //margin-left: 4.2em;
-  //transform: translateX(4.2em);
-  span{
-    display: inline-block;
-    transform: translateX(1.9em);
-    transition: transform 0.4s ease;
-  }
-  &::before{
-    content: '';
-    position: absolute;
-    top:50%;
-    left: -3em;
-    height: 1px;
-    width: 3.5em;
-    background-color: $color;
-    transition: all 0.25s ease;
-  }
-
-  &:hover, a:hover &{
-    @media (min-width: $mq-large){
-      margin-left: 0;
-      cursor: pointer;
-
-      span{
-        transform: translateX(0);
-        transition: transform 0.4s ease;
-        &::before{
-          width: 0;
-          transition: all 0.4s ease;
-        }
+    &:hover,
+    a:hover & {
+      @media (min-width: $mq-large) {
       }
+    }
+  }
+
+  &:hover {
+    > span::before {
+      width: 0;
+      transition: 0.4s;
+    }
+
+    > span > span {
+      transform: translateX(0);
+      transition: transform 0.4s ease;
     }
   }
 }
 
-@mixin section-title($color: var(--primary-sixth), $mb: 1rem){
+@mixin section-title($color: var(--primary-sixth), $mb: 1rem) {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+
   margin-top: 0;
   margin-bottom: $mb;
 

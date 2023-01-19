@@ -1,3 +1,5 @@
+@import "../../../theme/mixins.scss";
+
 .about {
   display: flex;
   justify-content: center;
@@ -17,23 +19,7 @@
 }
 
 .about__title {
-  margin-top: 0;
-  margin-bottom: 1.687rem;
-  
-  color: var(--primary-third);
-
-  font-family: helveticaNeue;
-  font-size: 2rem;
-  font-weight: 400;
-  line-height: 1.5;
-  text-transform: uppercase;
-  letter-spacing: 6.4px;
-}
-
-.about__line {
-  width: 3.75rem;
-  border-top: 1px solid var(--primary-third);
-  margin-bottom: 2.75rem;
+  @include section-title(var(--primary-third), 2.75rem);
 }
 
 .about__desc {

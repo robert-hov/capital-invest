@@ -1,7 +1,8 @@
 .language {
   display: flex;
   align-items: center;
-
+  cursor: pointer;
+  
   &.up:not(.top) .language__icon-container {
     svg {
       stroke: var(--primary-forth);

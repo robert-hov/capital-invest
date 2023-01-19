@@ -22,7 +22,7 @@
   color: #fff;
   transition: color 500ms;
 
-  font-family: helveticaNeue;
+  font-family: var(--primary-font);
   font-size: 0.875rem;
   font-weight: 500;
   line-height: 1.4;
@@ -41,5 +41,3 @@
     color: var(--primary-third);
   }
 }
-
-

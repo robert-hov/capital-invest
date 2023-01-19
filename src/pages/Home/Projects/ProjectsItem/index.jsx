@@ -12,7 +12,6 @@ const ProjectsItem = ({ title, img, link }) => {
         className="projects__item-img"
         style={{ backgroundImage: `url(${img})` }}
       />
-      <div className="projects__item-opacity" />
       <div className="projects__item-content">
         <h3 className="porjects__item-title">
           {titleArr.map((el, i) => {

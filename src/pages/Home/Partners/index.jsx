@@ -1,9 +1,9 @@
 import React from "react";
-import abb from "../../../assets/img/partners/abb.png";
-import shin from "../../../assets/img/partners/projectShin.png";
-import legal from "../../../assets/img/partners/legal.png";
-import tsaghkadzorLogo from "../../../assets/img/partners/tsaghkadzorLogo.png";
-import dilijanLogo from "../../../assets/img/partners/dilijanLogo.png";
+import abb from "../../../assets/img/partners/abb.svg";
+import shin from "../../../assets/img/partners/projectShin.svg";
+import legal from "../../../assets/img/partners/legal.svg";
+import tsaghkadzorLogo from "../../../assets/img/partners/tsaghkadzorLogo.svg";
+import dilijanLogo from "../../../assets/img/partners/dilijanLogo.svg";
 import './style.scss';
 
 const Partners = (props) => {
@@ -17,7 +17,7 @@ const Partners = (props) => {
       <div className="partners__icons">
         <a href="/" className="partners__icon partners__icon--abb">
           <span className="img-container">
-            <img src={abb} alt="Armenian Bussiness Bank" />
+            {/* <img src={abb} alt="Armenian Bussiness Bank" /> */}
           </span>
         </a>
         <a href="/" className="partners__icon partners__icon--shin">
