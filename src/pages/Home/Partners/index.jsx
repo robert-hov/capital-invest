@@ -1,10 +1,5 @@
 import React from "react";
-import abb from "../../../assets/img/partners/abb.svg";
-import shin from "../../../assets/img/partners/projectShin.svg";
-import legal from "../../../assets/img/partners/legal.svg";
-import tsaghkadzorLogo from "../../../assets/img/partners/tsaghkadzorLogo.svg";
-import dilijanLogo from "../../../assets/img/partners/dilijanLogo.svg";
-import './style.scss';
+import "./style.scss";
 
 const Partners = (props) => {
   return (
@@ -14,33 +9,23 @@ const Partners = (props) => {
         <div />
       </h2>
       <div className="partners__container">
-      <div className="partners__icons">
-        <a href="/" className="partners__icon partners__icon--abb">
-          <span className="img-container">
-            {/* <img src={abb} alt="Armenian Bussiness Bank" /> */}
-          </span>
-        </a>
-        <a href="/" className="partners__icon partners__icon--shin">
-          <span className="img-container">
-            <img src={shin} alt="Project Shin" />
-          </span>
-        </a>
-        <a href="/" className="partners__icon partners__icon--legal">
-          <span className="img-container">
-            <img src={legal} alt="Legal" />
-          </span>
-        </a>
-        <a href="/" className="partners__icon partners__icon--tsaghkadzor">
-          <span className="img-container">
-            <img src={tsaghkadzorLogo} alt="Tsaghkadzor Hills" />
-          </span>
-        </a>
-        <a href="/" className="partners__icon partners__icon--dilijan">
-          <span className="img-container">
-            <img src={dilijanLogo} alt="Dilijan Hills" />
-          </span>
-        </a>
-      </div>
+        <div className="partners__icons">
+          <a href="/" className="partners__icon partners__icon--abb">
+            <span className="img-container" />
+          </a>
+          <a href="/" className="partners__icon partners__icon--shin">
+            <span className="img-container" />
+          </a>
+          <a href="/" className="partners__icon partners__icon--legal">
+            <span className="img-container" />
+          </a>
+          <a href="/" className="partners__icon partners__icon--tsaghkadzor">
+            <span className="img-container" />
+          </a>
+          <a href="/" className="partners__icon partners__icon--dilijan">
+            <span className="img-container" />
+          </a>
+        </div>
       </div>
     </section>
   );
