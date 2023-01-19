@@ -1,5 +1,4 @@
 import React from "react";
-import { Navigation } from "swiper";
 import ServicesSwiper from "./ServicesSwiper";
 import "./style.scss";
 
