@@ -5,7 +5,7 @@ import "./style.scss";
 import { nav } from "../../../dev-data";
 import { useScrollDirection } from "../../../hooks/useScrollDirection";
 
-const Header = () => {
+const Header = ({location}) => {
   const scrollDirection = useScrollDirection();
 
   return (
@@ -24,7 +24,7 @@ const Header = () => {
                 </svg>
               </div>
             </a>
-            <Nav down={scrollDirection} content={nav} />
+            <Nav location={location} down={scrollDirection} content={nav} />
             <Language down={scrollDirection} />
           </div>
         </div>

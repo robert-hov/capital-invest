@@ -2,9 +2,9 @@ import React from "react";
 import Button from "../../components/Button";
 import './style.scss';
 
-const Mail = (props) => {
+const Mail = ({bgColor = 'var(--primary)'}) => {
   return (
-    <div className="mail">
+    <div className="mail" style={{'backgroundColor': bgColor}}>
       <div className="page-container">
         <h2 className="mail__title">get in touch</h2>
 

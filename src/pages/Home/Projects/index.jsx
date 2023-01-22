@@ -9,10 +9,10 @@ const Projects = (props) => {
   return (
     <div className="projects">
       <div className="projects__content">
-        <ProjectsItem link="/" title="tsaghkadzor hills" img={tsaghkadzor} />
-        <ProjectsItem link="/" title="Dilijan hills" img={dilijan} />
+        <ProjectsItem link="/projects/1" title="tsaghkadzor hills" img={tsaghkadzor} />
+        <ProjectsItem link="/projects/2" title="Dilijan hills" img={dilijan} />
       </div>
-      <ButtonSecondary link="/" text="see more" />
+      <ButtonSecondary link="/projects" text="see more" />
     </div>
   );
 };

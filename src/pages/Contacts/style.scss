@@ -1,0 +1,75 @@
+@import "../../theme/mixins.scss";
+
+.contacts {
+  padding-top: 3.312rem;
+  padding-bottom: 10.187rem;
+}
+
+.contact__content {
+  margin-left: 1.312rem;
+}
+
+.contact__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact__card {
+  max-width: 18.625rem;
+  &:not(:last-child) {
+    margin-bottom: 5.062rem;
+  }
+}
+
+.contact__card-title {
+  @include section-title(var(--primary-sixth), 1.625rem, flex-start);
+  span {
+    text-align: left;
+  }
+}
+
+.contact__card-text {
+  margin-bottom: 1.187rem;
+
+  color: var(--primary-sixth);
+
+  font-family: var(--primary-font);
+  font-size: 1.062rem;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.contact__card-mail {
+  color: var(--primary-sixth);
+
+  font-family: var(--primary-font);
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.5;
+  text-transform: uppercase;
+  letter-spacing: 2.8px;
+}
+
+.contact__card-smm {
+  ul {
+    li {
+      svg {
+        fill: var(--primary-sixth);
+      }
+    }
+  }
+}
+
+.contact__map {
+  position: relative;
+  width: 60.153%;
+  background-color: var(--primary-fifth);
+
+  &::before {
+    content: '';
+    display: block;
+    padding-top: 60.869%;
+  }
+}
