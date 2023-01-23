@@ -48,9 +48,7 @@ const ServicesSwiper = ({ content }) => {
                     className={`services__slide-img services__slide-img--${el.icon}`}
                   >
                     <div className="img-container">
-                      <svg className="icon">
-                        <use xlinkHref={`#${el.icon}`} />
-                      </svg>
+                      <img src={el.icon.img} alt={el.icon.text} />
                     </div>
                   </div>
                   <div className="services__slide-text-contianer">
