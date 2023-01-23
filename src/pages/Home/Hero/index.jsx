@@ -14,14 +14,16 @@ const Hero = ({
 }) => {
   const title = text.split("");
   return (
-    <Parallax strength={300}>
+    <>
       <div
         className={`hero${other ? " hero--other" : ""}${
           inner ? " hero--inner" : ""
         }`}
       >
         <div className="hero__img">
-          <img src={bgImg} alt="capital invest" />
+        <Parallax strength={300} bgImage={bgImg}>
+          {/* <img src={bgImg} alt="capital invest" /> */}
+        </Parallax>
         </div>
         <div className="hero__content">
           {logo ? (
@@ -42,7 +44,7 @@ const Hero = ({
           )}
         </div>
       </div>
-    </Parallax>
+    </>
   );
 };
 
