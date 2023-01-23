@@ -4,13 +4,15 @@
 .button-secondary {
   display: flex;
   justify-content: center;
-  padding-top: 1.562rem;
-  padding-bottom: 1.562rem;
+  padding: 2.5rem;
 
-  background-color: var(--primary-sixth);
-
+  background-color: var(--primary-third-80);
+  transition: background-color 0.75s cubic-bezier(0.4, 0, 0.2, 1);
   @include btn-link($primary);
   text-decoration: none;
+  &:hover {
+    background-color: var(--primary-third);
+  }
 }
 
 .button-secondary__text {

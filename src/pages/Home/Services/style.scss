@@ -1,8 +1,9 @@
 @import "../../../theme/mixins.scss";
 
 .services {
-  padding-top: 2.312rem;
-  padding-bottom: 2.312rem;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  background-color: var(--primary-fifth);
 }
 
 .services__title {
