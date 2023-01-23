@@ -76,7 +76,7 @@ const Services = (props) => {
           <div />
         </h2>
         <ServicesSwiper content={slides} />
-      </div>
+        </div>
     </section>
   );
 };
