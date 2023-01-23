@@ -11,13 +11,9 @@ import ServicePage from "./pages/Services";
 function App() {
   const location = useLocation();
   const [curLocation, setCurLocation] = useState(location);
+  document.title = `CAPITAL INVEST`;
   useEffect(() => {
-    const getFile = fullPath => {
-      const path = fullPath.split('?')
-       return path.split('/')[1]
-      }
-    setCurLocation(location)
-    document.title = `CAPITAL INVEST ${getFile(location.pathname) ? `| ${getFile(location.pathname.toUpperCase())}` : ''}`
+    setCurLocation(location);
   }, [location]);
   return (
     <div className="App">
