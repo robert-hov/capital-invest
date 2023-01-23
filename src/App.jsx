@@ -12,8 +12,12 @@ function App() {
   const location = useLocation();
   const [curLocation, setCurLocation] = useState(location);
   useEffect(() => {
+    const getFile = fullPath => {
+      const [path, query] = fullPath.split('?')
+       return path.split('/')[1]
+      }
     setCurLocation(location)
-    console.log(location)
+    document.title = `CAPITAL INVEST ${getFile(location.pathname) ? `| ${getFile(location.pathname.toUpperCase())}` : ''}`
   }, [location]);
   return (
     <div className="App">
