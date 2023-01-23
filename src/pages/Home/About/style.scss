@@ -25,11 +25,11 @@
 .about__desc {
   color: var(--primary-third);
 
-  font-family: montserrat;
+  font-family: var(--secondary-font);
   font-size: 1.25rem;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.219;
   text-transform: capitalize;
   text-align: center;
-  letter-spacing: 6.4%;
+  letter-spacing: 4px;  
 }
