@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { footerNav } from "../../../../dev-data";
 import "./style.scss";
 
@@ -8,9 +9,9 @@ const FooterNav = (props) => {
       {footerNav.map((el, i) => {
         return (
           <li key={i} className="footer__nav-item">
-            <a href={el.link} className="footer__nav-link">
+            <Link to={el.link} className="footer__nav-link">
               {el.text}
-            </a>
+            </Link>
           </li>
         );
       })}

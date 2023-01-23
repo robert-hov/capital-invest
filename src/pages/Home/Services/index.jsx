@@ -9,15 +9,14 @@ import paperWork from "../../../assets/img/swiper/paperWork.svg";
 import analytics from "../../../assets/img/swiper/analytics.svg";
 import rocket from "../../../assets/img/swiper/rocket.svg";
 import buildings from "../../../assets/img/swiper/buildings.svg";
-
-
+import ButtonSecondary from "../../components/ButtonSecondary";
 
 const Services = (props) => {
   const slides = [
     {
       icon: {
         img: rocket,
-        text: 'rocket'
+        text: "rocket",
       },
       text: (
         <>
@@ -29,14 +28,14 @@ const Services = (props) => {
     {
       icon: {
         img: law,
-        text: 'law'
+        text: "law",
       },
       text: <>Legal Services</>,
     },
     {
       icon: {
         img: mouthpiece,
-        text: 'mouthpiece'
+        text: "mouthpiece",
       },
       text: (
         <>
@@ -48,14 +47,14 @@ const Services = (props) => {
     {
       icon: {
         img: buildings,
-        text: 'buildings'
+        text: "buildings",
       },
       text: "Creation, analysis and implementation of investment plans",
     },
     {
       icon: {
         img: analytics,
-        text: 'analytics'
+        text: "analytics",
       },
       text: (
         <>
@@ -67,7 +66,7 @@ const Services = (props) => {
     {
       icon: {
         img: paperWork,
-        text: 'paper work'
+        text: "paper work",
       },
       text: (
         <>
@@ -80,7 +79,7 @@ const Services = (props) => {
     {
       icon: {
         img: percent,
-        text: 'percent'
+        text: "percent",
       },
       text: (
         <>
@@ -92,7 +91,7 @@ const Services = (props) => {
     {
       icon: {
         img: research,
-        text: 'research'
+        text: "research",
       },
       text: (
         <>
@@ -103,6 +102,7 @@ const Services = (props) => {
     },
   ];
   return (
+    <>
     <section className="services">
       <div className="page-container">
         <h2 className="services__title">
@@ -110,8 +110,10 @@ const Services = (props) => {
           <div />
         </h2>
         <ServicesSwiper content={slides} />
-        </div>
+      </div>
     </section>
+        <ButtonSecondary text="See more" link="/services" />
+        </>
   );
 };
 

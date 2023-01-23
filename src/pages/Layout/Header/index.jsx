@@ -4,6 +4,7 @@ import Nav from "./Nav";
 import "./style.scss";
 import { nav } from "../../../dev-data";
 import { useScrollDirection } from "../../../hooks/useScrollDirection";
+import { Link } from "react-router-dom";
 
 const Header = ({location}) => {
   const scrollDirection = useScrollDirection();
@@ -17,13 +18,13 @@ const Header = ({location}) => {
       >
         <div className="page-container">
           <div className="header__container">
-            <a href="/" className="header__logo-container">
+            <Link to="/" className="header__logo-container">
               <div className="img-container">
                 <svg className="icon">
                   <use xlinkHref="#logo" />
                 </svg>
               </div>
-            </a>
+            </Link>
             <Nav location={location} down={scrollDirection} content={nav} />
             <Language down={scrollDirection} />
           </div>

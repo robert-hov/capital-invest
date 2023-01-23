@@ -43,6 +43,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  text-align: center;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .services__slide-img {
@@ -76,8 +81,4 @@
   font-size: 1.25;
   font-weight: 300;
   line-height: 1.219;
-  text-align: center;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }

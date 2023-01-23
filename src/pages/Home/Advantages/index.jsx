@@ -1,6 +1,6 @@
 import React from "react";
 import tsaghkadzor from "../../../assets/img/advantages/tsaghkadzor.png";
-import './style.scss';
+import "./style.scss";
 
 const Advantages = (props) => {
   return (
@@ -8,9 +8,7 @@ const Advantages = (props) => {
       <div className="page-container">
         <div className="advantages__container">
           <h2 className="advantages__title">
-            <span>
-            OUR ADVANTAGES
-            </span>
+            <span>OUR ADVANTAGES</span>
             <div />
           </h2>
           <div className="advantages__content">

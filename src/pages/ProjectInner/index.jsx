@@ -8,7 +8,6 @@ import "./style.scss";
 const ProjectInner = () => {
   const params = useParams();
   const { title, content } = projectsData[params.id - 1];
-  console.log(params);
   return (
     <>
       <Hero inner={true} logo={content.logo} bgImg={content.cover} text={title} />

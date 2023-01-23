@@ -20,8 +20,8 @@ const Home = (props) => {
       />
       <About />
       <Projects />
-      <Services />
       <Advantages />
+      <Services />
       <Partners />
       <Mail bgColor="var(--primary-fifth)"/>
     </>

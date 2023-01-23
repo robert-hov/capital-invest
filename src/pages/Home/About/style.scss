@@ -1,4 +1,5 @@
 @import "../../../theme/mixins.scss";
+@import "../../../theme/extends.scss";
 
 .about {
   display: flex;
@@ -25,11 +26,7 @@
 .about__desc {
   color: var(--primary-third);
 
-  font-family: var(--secondary-font);
-  font-size: 1.25rem;
-  font-weight: 300;
-  line-height: 1.2;
+  @extend %font-body;
   text-transform: capitalize;
   text-align: center;
-  letter-spacing: 0.04em;  
 }

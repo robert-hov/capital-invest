@@ -2,6 +2,7 @@ import React from 'react';
 import Hero from '../Home/Hero';
 import bgImg from '../../assets/hero/hero.png'
 import ProjecstCard from './ProjectsCard';
+import './style.scss'
 
 import { projectsData } from '../../dev-data';
 

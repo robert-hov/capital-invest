@@ -36,15 +36,15 @@ export const nav = [
 
 export const footerNav = [
   {
-    link: "/",
+    link: "/projects",
     text: "projects",
   },
   {
-    link: "/",
+    link: "/career",
     text: "career",
   },
   {
-    link: "/",
+    link: "/services",
     text: "services",
   },
 ];

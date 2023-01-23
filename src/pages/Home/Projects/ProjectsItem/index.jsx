@@ -5,7 +5,6 @@ import "./style.scss";
 
 const ProjectsItem = ({ title, img, link }) => {
   const titleArr = title.split("");
-  console.log(titleArr);
   return (
     <Link to={link} className="projects__item">
       <div

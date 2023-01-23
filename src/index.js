@@ -4,12 +4,14 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import Svg from "./pages/components/Svg";
 import "./style.scss";
+import { ScrollToTop } from "./utils/hellper";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
     <BrowserRouter>
+      <ScrollToTop />
       <Svg />
       <App />
     </BrowserRouter>
