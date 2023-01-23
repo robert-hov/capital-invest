@@ -13,7 +13,7 @@ function App() {
   const [curLocation, setCurLocation] = useState(location);
   useEffect(() => {
     const getFile = fullPath => {
-      const [path, query] = fullPath.split('?')
+      const path = fullPath.split('?')
        return path.split('/')[1]
       }
     setCurLocation(location)
