@@ -15,7 +15,7 @@ const Header = ({ location }) => {
   useEffect(() => {
     if (menuOpened) blockScroll();
     else allowScroll();
-  }, [menuOpened]);
+  }, [menuOpened, allowScroll, blockScroll]);
   return (
     <>
       <header
