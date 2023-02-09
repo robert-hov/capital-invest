@@ -1,11 +1,23 @@
+@use "../../../../theme/variables.scss";
+
 .footer__smm {
   display: flex;
   list-style-type: none;
-}
+
+  @media (max-width: variables.$small) {
+    margin-top: 0.312rem;
+  }
+  }
 
 .footer__smm-item {
   &:not(:last-child) {
     margin-right: 0.625rem;
+  }
+
+  @media (max-width: variables.$small) {
+    &:not(:last-child) {
+      margin-right: 0.437rem;
+    }
   }
 }
 
@@ -28,5 +40,9 @@
 
   &:hover {
     opacity: 1;
+  }
+
+  @media (max-width: variables.$small) {
+    width: 0.687rem;
   }
 }

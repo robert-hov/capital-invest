@@ -1,11 +1,11 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { SwiperSlide, Swiper } from "swiper/react";
 import "./style.scss";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import { useState } from "react";
+import { Pagination } from "swiper";
 
 const ServicesSwiper = ({ content }) => {
   const swiperRef = useRef();
@@ -27,8 +27,10 @@ const ServicesSwiper = ({ content }) => {
           </span>
         </button>
         <Swiper
-          slidesPerView={4}
+          slidesPerView={3}
           spaceBetween={40}
+          pagination={true}
+          modules={[Pagination]}
           onSlideChange={(swiper) => {
             setDisabled({
               isEnd: swiper.isEnd,
@@ -39,20 +41,30 @@ const ServicesSwiper = ({ content }) => {
           onBeforeInit={(swiper) => {
             swiperRef.current = swiper;
           }}
+          breakpoints={{
+            320: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            1250: {
+              slidesPerView: 3,
+              spaceBetween: 50,
+            },
+          }}
         >
           {content.map((el, i) => {
             return (
               <SwiperSlide key={i} className="services__slide">
                 <div className="services__slide-content">
-                  <div
-                    className={`services__slide-img services__slide-img--${el.icon}`}
-                  >
+                  <div className={`services__slide-img`}>
                     <div className="img-container">
-                      <img src={el.icon.img} alt={el.icon.text} />
+                      <svg className="icon">
+                        <use xlinkHref={`#${el.icon?.hrefLink}`}></use>
+                      </svg>
                     </div>
                   </div>
                   <div className="services__slide-text-contianer">
-                    <span className="services__slide-text">{el.text}</span>
+                    <span className="services__slide-text">{el.content}</span>
                   </div>
                 </div>
               </SwiperSlide>

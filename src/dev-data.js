@@ -8,8 +8,8 @@ import d1 from "./assets/img/porjects/dilijan/d1.png";
 import d2 from "./assets/img/porjects/dilijan/d2.png";
 import d3 from "./assets/img/porjects/dilijan/d3.png";
 import d4 from "./assets/img/porjects/dilijan/d4.png";
-import dilijanLogo from "././assets/img/partners/dilijanLogo.svg";
-import tsaghkadzorLogo from "./assets/img/partners/tsaghkadzorLogo.svg";
+import dilijanLogo from "./assets/img/porjects/dilijan/dilijanLogo.png";
+import tsaghkadzorLogo from "./assets/img/porjects/tsaghkadzor/tsaghkadzorLogo.png";
 
 export const nav = [
   {
@@ -90,3 +90,87 @@ export const projectsData = [
     },
   },
 ];
+
+export  const serviceSlides = [
+  {
+    icon: {
+      hrefLink: "law",
+      alt: "law icon",
+    },
+    content: <>Legal services</>,
+  },
+  {
+    icon: {
+      hrefLink: "discount",
+      alt: "discount icon",
+    },
+    content: (
+      <>
+        organization and implementation of sales
+      </>
+    ),
+  },
+  {
+    icon: {
+      hrefLink: "rocket",
+      alt: "rocket icon",
+    },
+    content: <>Project management</>,
+  },
+  {
+    icon: {
+      hrefLink: "research",
+      alt: "research icon",
+    },
+    content: (
+      <>
+        Market research and analysis
+      </>
+    ),
+  },
+  {
+    icon: {
+      hrefLink: "ad",
+      alt: "ad icon",
+    },
+    content: (
+      <>
+        ADVERTISING IMPLEMENTATION
+      </>
+    ),
+  },
+  {
+    icon: {
+      hrefLink: "finance",
+      alt: "finance icon",
+    },
+    content: (
+      <>
+        Financial management
+      </>
+    ),
+  },
+  {
+    icon: {
+      hrefLink: "books",
+      alt: "books icon",
+    },
+    content: (
+      <>
+        organiziNG and RELYING of DOCUMENTATION
+      </>
+    ),
+  },
+  {
+    icon: {
+      hrefLink: "buildings",
+      alt: "buildings icon",
+    },
+    content: (
+      <>
+        cREATION, ANALYSIS AND IMPLEMENTATION OF INVESTMENT PLANS
+      </>
+    ),
+  },
+];
+

@@ -1,14 +1,23 @@
+@use "../../../../theme/variables.scss";
 @import "../../../../theme/mixins.scss";
 
 .footer__nav {
   display: flex;
   list-style-type: none;
-  margin-bottom: 2rem;
+  //margin-bottom: 2rem;
+
+  @media (max-width: variables.$med) {
+    flex-direction: column;
+  }
 }
 
 .footer__nav-item {
   &:not(:last-child) {
     margin-right: 4.375rem;
+    @media (max-width: variables.$med) {
+      margin-right: 0;
+      margin-bottom: 0.625rem;
+    }
   }
 }
 
@@ -25,4 +34,15 @@
   letter-spacing: 3px;
 
   @include nav-links(var(--primary));
+
+  @media (max-width: variables.$med) {
+    font-size: 0.75rem;
+    line-height: 1.75;
+    letter-spacing: 2px;
+  }
+
+  @media (max-width: variables.$small) {
+    font-size: 0.625rem;
+    line-height: 1.312;
+  }
 }

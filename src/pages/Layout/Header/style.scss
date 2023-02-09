@@ -1,3 +1,6 @@
+@use "../../../theme/variables.scss";
+@import "../../../theme/config.scss";
+
 .header {
   position: fixed;
   top: 0;
@@ -6,28 +9,58 @@
   width: 100%;
   z-index: 100;
   padding-top: 1rem;
-  padding-bottom: 1rem; 
-  transition-property: all; 
+  padding-bottom: 1rem;
+  transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 500ms;
 
   &.down {
-    top: -6rem
+    top: -6rem;
   }
 
-  &.up.top {
+  &.top {
     background-color: transparent;
   }
 
-  &.up:not(.top) {
+  &.up {
     background-color: white;
     box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
+
+    .header__logo-container svg {
+      fill: var(--primary-forth);
+    }
+
+    .hamburger-icon {
+      .line {
+        background-color: var(--primary-forth);
+        &::after,
+        &::before {
+          background-color: var(--primary-forth);
+        }
+      }
+    }
   }
 
-  &.up:not(.top) .header__logo-container svg {
-    fill: var(--primary-forth);
+  @media (max-width: variables.$med) {
+    padding-top: 1.75rem;
+
+    &--active {
+      .header__logo-container {
+        z-index: 100;
+        svg {
+          fill: var(--primary-sixth);
+        }
+      }
+    }
+  }
+
+  @media (max-width: variables.$small) {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
   }
 }
+
+
 
 .header__container {
   display: flex;
@@ -37,10 +70,11 @@
 
 .header__logo-container {
   position: relative;
+  z-index: 100;
   display: flex;
   width: 2.687rem;
   // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: all; 
+  transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 500ms;
 
@@ -55,6 +89,104 @@
   }
 
   &:hover {
-    opacity: .7;
+    opacity: 0.7;
+  }
+
+  @media (max-width: variables.$med) {
+    width: 4rem;
+  }
+
+  @media (max-width: variables.$small) {
+    width: 2.437rem;
+  }
+}
+
+.hamburger-icon {
+  position: relative;
+  display: none;
+
+  height: 2.187rem;
+  width: 4.625rem;
+  padding: 0;
+
+  background-color: transparent;
+  box-sizing: border-box;
+  border: none;
+  cursor: pointer;
+
+  &.active {
+    .line {
+      background-color: transparent!important;
+
+      &::before {
+        transform: rotate(-45deg);
+      }
+
+      &::after {
+        transform: rotate(45deg);
+      }
+
+      &::before,
+      &::after {
+        top: 0 !important;
+        background: rgba(153, 153, 153, 1);
+        zoom: 1;
+        z-index: 10;
+      }
+    }
+  }
+
+  @media (max-width: variables.$med) {
+    display: flex;
+  }
+
+  @media (max-width: variables.$small) {
+    height: 1rem;
+    width: 2.448rem;
+  }
+}
+
+.line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  -webkit-transition: background 0.4s ease-in-out;
+  transition: background 0.4s ease-in-out;
+
+  &::before,
+  &::after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 1px;
+    background: #fff;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+  }
+
+  &::before {
+    top: -15px;
+  }
+
+  &::after {
+    top: 15px;
+  }
+
+  @media (max-width: variables.$small) {
+    &::before {
+      top: -8px;
+    }
+
+    &::after {
+      top: 8px;
+    }
   }
 }

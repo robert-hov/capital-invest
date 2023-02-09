@@ -1,20 +1,63 @@
+@use "../../../../theme/variables.scss";
 @import "../../../../theme/mixins.scss";
+@import "../../../../theme/extends.scss";
 
 .nav {
-  width: 70%;
-  margin: 0 5.937rem;
+  display: flex;
+  align-items: center;
+  width: 76.923%;
+  margin: 0;
 
   &.down {
     &__link {
       color: black;
     }
   }
+
+  @media (max-width: variables.$med) {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+
+    padding: 9.187rem 4.375rem 2rem;
+    margin-left: 0;
+    background-color: var(--primary-fifth);
+
+    &--active {
+      display: flex;
+    }
+  }
+
+  @media (max-width: variables.$small) {
+    padding: 5.437rem 2rem 2rem;
+  }
 }
 
 .nav__list {
+  flex-grow: 1;
   display: flex;
   justify-content: space-between;
   list-style-type: none;
+
+  @media (max-width: 54rem) {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: unset;
+  }
+}
+
+.nav__item {
+  @media (max-width: variables.$med) {
+    margin-bottom: 1.687rem;
+  }
+
+  @media (max-width: variables.$small) {
+    margin-bottom: 1.312rem;
+  }
 }
 
 .nav__link {
@@ -22,25 +65,44 @@
   color: #fff;
   transition: color 500ms;
 
-  font-family: var(--primary-font);
-  font-size: 0.875rem;
-  font-weight: 500;
-  line-height: 1.4;
-  letter-spacing: 3px;
-  text-decoration: none;
-  text-transform: uppercase;
+  @extend %header-footer-font;
   @include nav-links(var(--primary));
 
   &--active {
+    font-weight: 700;
     &::after {
       transform: translateX(0);
       opacity: 1;
       transition: opacity 0.6s ease, transform 0.4s ease-in-out;
     }
   }
+
+  @media (max-width: variables.$med) {
+
+    color: var(--primary-eighth);
+
+    font-family: var(--primary-font);
+    font-size: 1.875rem;
+    font-weight: 300;
+    line-height:  1.866;
+    letter-spacing: 0.266em;
+    text-decoration: none;
+    text-transform: uppercase;
+    @include nav-links(var(--primary-eighth));
+
+    &--active {
+      font-weight: 300;
+    }
+  }
+
+  @media (max-width: variables.$med) {
+    font-size: 1.28rem;
+    line-height: 2.24;
+    letter-spacing: 0.32em;
+  }
 }
 
-.nav.up:not(.top) .nav__link {
+.nav.up .nav__link {
   color: var(--primary-forth);
 
   @include nav-links(var(--primary-third));
@@ -54,20 +116,18 @@
   }
 }
 
-.nav.up:not(.top) .nav__link--active {
-  
+.nav.up .nav__link--active {
   &::after {
     transform: translateX(0);
     opacity: 1;
     transition: opacity 0.6s ease, transform 0.4s ease-in-out;
     background-color: var(--primary-forth);
-    
+
     transition: background-color 0.6s ease;
   }
 
   &:hover {
     &::after {
-
       background-color: var(--primary-third);
     }
   }

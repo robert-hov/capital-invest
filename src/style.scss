@@ -1,8 +1,16 @@
+@use "./theme/variables.scss";
 @import "./theme/fonts.scss";
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
 
 html {
   font-size: 16px;
   font-family: var(--primary-font);
+  box-sizing: border-box;
 
   --primary: rgba(255, 255, 255, 1);
   --primary-50: rgba(255, 255, 255, 0.5);
@@ -16,10 +24,30 @@ html {
   --primary-fifth: rgba(236, 234, 230, 1);
   --primary-sixth: rgba(21, 21, 21, 1);
   --primary-seventh: rgba(163, 161, 161, 1);
+  --primary-eighth: rgba(153, 153, 153, 1);
+  --primary-ninth: rgba(200, 196, 188, 1);
+  --primary-tenth: rgba(249, 249, 248, 1);
+  --primary-eleventh: rgba(241, 241, 239, 1);
 
   --primary-font: gotham, "Helvetica Neue", sans-serif;
   --primary-font-narrow: "Gotham Narrow", sans-serif;
   --secondary-font: montserrat, sans-serif;
+  --primary-font-helvetica: "Helvetica Neue", gotham, sans-serif;
+
+  //Smallest phone
+  --mq-xsmall: 22rem;
+  //phone
+  --mq-small: 32rem;
+  //Tablet
+  --mq-med: 54rem;
+  //laptop
+  --mq-large: 65rem;
+  //Past laptop
+  --mq-xlarge: 91rem;
+  //Mid Size monitor
+  --mq-xxlarge: 115rem;
+  //Thunderbold goes to 157em
+  --mq-xxxlarge: 130rem;
 }
 
 html[data-theme="night"] {
@@ -51,6 +79,18 @@ ol {
   width: 90.277%;
   max-width: 87.5rem;
   margin: 0 auto;
+
+  @media (max-width: variables.$med) {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0 1.875rem;
+    box-sizing: border-box;
+  }
+
+  @media (max-width: variables.$small) {
+    padding: 0 0.937rem;
+  }
 }
 
 .img-container {

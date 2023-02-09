@@ -1,3 +1,4 @@
+@use "../../../theme/variables.scss";
 @import "../../../theme/mixins.scss";
 
 .partners {
@@ -5,16 +6,38 @@
   padding-bottom: 7.062rem;
 
   background-color: var(--primary-second);
+
+
+  @media (max-width: variables.$med) {
+    padding-top: 1.125rem;
+    padding-bottom: 7.437rem;
+
+    .page-container {
+      padding: 0 0 0 1.875rem;
+    }
+  }
+
+  @media (max-width:variables.$small) {
+    padding-top: 0.562rem;
+    padding-bottom: 2.875rem;
+
+    .page-container {
+      padding: 0;
+    }
+  }
 }
 
 
 .partners__title {
   @include section-title(var(--primary), 5.375rem);
-}
 
-.partners__container {
-  display: flex;
-  justify-content: center;
+  @media (max-width: variables.$med) {
+    @include section-title(var(--primary), 3.968rem);
+  }
+
+  @media (max-width:variables.$small) {
+    @include section-title(var(--primary), 2.437rem);
+  }
 }
 
 .partners__icons {
@@ -42,6 +65,7 @@
   &--abb {
     mask: url(../../../assets/img/partners/abb.svg) no-repeat center;
     width: 12.962%;
+
     &::before {
       padding-top: 29.285%;
     }
@@ -50,14 +74,16 @@
   &--shin {
     mask: url(../../../assets/img/partners/projectShin.svg) no-repeat center;
     width: 10.185%;
+
     &::before {
       padding-top: 68.181%;
     }
   }
 
-  &--legal{
+  &--legal {
     mask: url(../../../assets/img/partners/legal.svg) no-repeat center;
     width: 10.185%;
+
     &::before {
       padding-top: 68.181%;
     }
@@ -66,6 +92,7 @@
   &--tsaghkadzor {
     mask: url(../../../assets/img/partners/tsaghkadzorLogo.svg) no-repeat center;
     width: 14.629%;
+
     &::before {
       padding-top: 50%;
     }
@@ -74,6 +101,7 @@
   &--dilijan {
     mask: url(../../../assets/img/partners/dilijanLogo.svg) no-repeat center;
     width: 13.888%;
+
     &::before {
       padding-top: 34%;
     }

@@ -1,4 +1,14 @@
+@use "../../../theme/variables.scss";
+
+.projects {
+
+}
+
 .projects__content {
   display: flex;
+
+  @media (max-width: variables.$med) {
+   flex-direction: column;
+  }
 }
 

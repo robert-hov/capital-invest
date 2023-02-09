@@ -1,0 +1,35 @@
+@import "../../theme/extends.scss";
+@import "../../theme/mixins.scss";
+
+.career {
+  padding-top: 3.5rem;
+  padding-bottom: 2.75rem;
+}
+
+.career__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.career__title {
+  @include section-title(var(--primary-sixth), 3rem)
+}
+
+.career__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 43.076%;
+  min-width: 34.375rem;
+}
+
+.career__input-container {
+  width: 100%;
+  margin-bottom: 2.875rem;
+}
+
+.career__input {
+  @extend %input;
+}

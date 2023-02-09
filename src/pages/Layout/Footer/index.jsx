@@ -10,8 +10,9 @@ const Footer = (props) => {
         <div className="footer__container">
           <div className="footer__left">
             <FooterNav />
-            <Smm />
           </div>
+          <div className="footer__logo-container">
+
           <a href="/" className="footer__logo">
             <span className="img-container">
               <svg className="icon">
@@ -19,13 +20,15 @@ const Footer = (props) => {
               </svg>
             </span>
           </a>
+          </div>
           <div className="footer__right">
             <span className="footer__right-text footer__right-text--address">
-              Nairi ZarYan st.Yerevan armenia 17/1
+              Nairi ZarYan st. 17/1
             </span>
             <span className="footer__right-text footer__right-text--tel">
               +374098888888
             </span>
+            <Smm />
           </div>
         </div>
         <div className="footer__copyright">

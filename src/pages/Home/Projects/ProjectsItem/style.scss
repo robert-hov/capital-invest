@@ -1,3 +1,4 @@
+@use "../../../../theme/variables.scss";
 @import "../../../../theme/mixins.scss";
 
 @keyframes letter-fade-in {
@@ -35,21 +36,42 @@
 
   text-decoration: none;
 
-  &:hover {
-    .projects__item-img {
-      opacity: 0.3;
-      transform: scale(1.2);
-      // opacity: 0.3;
-      transition: transform 15s, opacity 1s ease-in-out;
-    }
+  @media (min-width: variables.$med) {
+    &:hover {
+      .projects__item-img {
+        opacity: 0.3;
+        transform: scale(1.2);
+        // opacity: 0.3;
+        transition: transform 15s, opacity 1s ease-in-out;
+      }
 
-    .projects__item-opacity {
-      background-color: var(--primary-third-50);
-    }
+      .projects__item-opacity {
+        background-color: var(--primary-third-50);
+      }
 
-    .porjects__item-title span {
-      animation: letter-fade-in 0.7s 0s ease both;
-      @include nth-ani-delay(60, 0.04s);
+      .porjects__item-title span {
+        animation: letter-fade-in 0.7s 0s ease both;
+        @include nth-ani-delay(60, 0.04s);
+      }
+    }
+  }
+
+  @media (max-width: variables.$med) {
+    width: 100%;
+    padding-top: 7.687rem;
+    padding-bottom: 7rem;
+
+    &:not(:last-child) {
+      margin-bottom: 0.562rem;
+    }
+  }
+
+  @media (max-width: variables.$small) {
+    padding-top: 4.25rem;
+    padding-bottom: 6.125rem;
+
+    &:not(:last-child) {
+      margin-bottom: 0;
     }
   }
 }
@@ -93,6 +115,12 @@
   max-width: 86.111%;
   position: relative;
   z-index: 10;
+
+  & > button {
+    @media (max-width: variables.$med) {
+      display: none;
+    }
+  }
 }
 
 .porjects__item-title {
@@ -109,5 +137,14 @@
 
   span {
     letter-spacing: 0.425rem;
+  }
+
+  @media (max-width: variables.$med) {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: variables.$med) {
+    font-size: 1.25rem;
+    line-height: 2.4;
   }
 }

@@ -7,6 +7,7 @@ import Layout from "./pages/Layout";
 import ProjectInner from "./pages/ProjectInner";
 import ProjectsPage from "./pages/Projects";
 import ServicePage from "./pages/Services";
+import { withNamespaces } from 'react-i18next';
 
 function App() {
   const location = useLocation();
@@ -19,7 +20,7 @@ function App() {
     <div className="App">
       <Layout location={curLocation}>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home  />} />
           <Route path="/services" element={<ServicePage />} />
           <Route path="/career" element={<CareerPage />} />
           <Route path="/contacts" element={<ContactPage />} />
@@ -31,4 +32,4 @@ function App() {
   );
 }
 
-export default App;
+export default withNamespaces()(App);

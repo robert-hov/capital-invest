@@ -5,7 +5,7 @@ import App from "./App";
 import Svg from "./pages/components/Svg";
 import "./style.scss";
 import { ScrollToTop } from "./utils/hellper";
-
+import './i18n'
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(

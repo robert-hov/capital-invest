@@ -1,3 +1,5 @@
+@use "../../../theme/variables.scss";
+
 .footer {
   margin-top: auto;
 
@@ -5,18 +7,42 @@
   padding-bottom: 1.25rem;
 
   background-color: var(--primary-second);
+
+  @media (max-width: variables.$small) {
+    padding-top: 0.625rem;
+    padding-bottom: 0.375rem;
+  }
 }
 
 .footer__container {
   display: flex;
   margin-bottom: 2.812rem;
+
+  @media (max-width: variables.$med) {
+    align-items: flex-end;
+  }
+
+  @media (max-width: variables.$small) {
+    flex-wrap: wrap;
+    margin-bottom: 1.687rem;
+    align-items: unset;
+  }
+}
+
+.footer__logo-container {
+  flex-shrink: 0;
+
+  @media (max-width: variables.$small) {
+    width: 100%;
+    order: 1;
+    margin-bottom: 1.437rem;
+  }
 }
 
 .footer__logo {
   position: relative;
   display: block;
   width: 9.187rem;
-  flex-shrink: 0;
   transition: opacity 300ms;
 
   &::before {
@@ -32,17 +58,37 @@
   &:hover {
     opacity: .7;
   }
+
+  @media (max-width: variables.$med) {
+    width: 6.125rem;
+  }
+
+  @media (max-width: variables.$small) {
+    margin: 0 auto;
+    width: 4rem;
+  }
 }
 
 .footer__left {
   flex-grow: 1;
   flex-basis: 0%;
+
+  @media (max-width: variables.$small) {
+    order: 2
+  }
 }
 
 .footer__right {
   // width: 23.538%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
   flex-grow: 1;
   flex-basis: 0%;
+
+  @media (max-width: variables.$small) {
+    order: 3
+  }
 }
 
 .footer__right-text {
@@ -58,6 +104,23 @@
   text-transform: uppercase;
   letter-spacing: 2px;
   text-align: right;
+
+  @media (max-width: variables.$med) {
+    width: unset;
+    margin-bottom: 0.625rem;
+
+    font-size: 0.75rem;
+    line-height: 1.75;
+    letter-spacing: 2px;
+  }
+
+  @media (max-width: variables.$small) {
+    margin-bottom: 0rem;
+
+    font-size: 0.625rem;
+    line-height: 2.1;
+    letter-spacing: 2px;
+  }
 }
 
 .footer__copyright-text {
@@ -69,4 +132,11 @@
   font-size: 0.875rem;
   font-weight: 500;
   line-height: 1.219rem;
+
+  @media (max-width: variables.$small) {
+    display: block;
+    font-size: 0.5rem;
+    line-height: 1.218;
+    text-align: center;
+  }
 }

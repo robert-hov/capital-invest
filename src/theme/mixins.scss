@@ -1,3 +1,4 @@
+@use "./variables.scss";
 @import "./config.scss";
 @import "./extends.scss";
 
@@ -15,11 +16,13 @@
     transition: opacity 0.6s ease, transform 0.4s ease-in-out;
   }
 
-  &:hover {
-    &::after {
-      transform: translateX(0);
-      opacity: 1;
-      transition: opacity 0.6s ease, transform 0.4s ease-in-out;
+  @media (min-width: variables.$med) {
+    &:hover {
+      &::after {
+        transform: translateX(0);
+        opacity: 1;
+        transition: opacity 0.6s ease, transform 0.4s ease-in-out;
+      }
     }
   }
 }
@@ -64,11 +67,13 @@
       width: 0;
       background-color: $color;
     }
+
     &::before {
       top: 0;
       left: 0;
       transition: width 0.15s 0.45s $ease-cb3; // 4th
     }
+
     &::after {
       bottom: 0;
       right: 0;
@@ -86,11 +91,13 @@
       background-color: $color;
       transition: all 0.2s cubic-bezier(0.2, 0.3, 0.25, 0.9);
     }
+
     &::before {
       left: 0;
       bottom: 0;
       transition: height 0.15s 0 $ease-cb3; // 1st
     }
+
     &::after {
       right: 0;
       top: 0;
@@ -118,6 +125,7 @@
           max-width: 100%;
           transition: width 0.15s $ease-cb3; // 1st
         }
+
         &::after {
           width: 100%;
           transition: width 0.15s 0.3s $ease-cb3; // 3rd
@@ -130,6 +138,7 @@
           height: 100%;
           transition: height 0.15s 0.45s $ease-cb3; // 4th
         }
+
         &::after {
           right: 0;
           height: 100%;
@@ -158,6 +167,7 @@
       transform: translateX(1.9em);
       transition: transform 0.4s ease;
     }
+
     &::before {
       content: "";
       position: absolute;
@@ -198,12 +208,42 @@
   margin-bottom: $mb;
 
   span {
-    @extend %font-title;
+    font-family: var(--primary-font);
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.5;
+    text-transform: uppercase;
+    letter-spacing: 0.125em;
+    text-align: center;
+
+
+    @media (max-width: variables.$med) {
+      font-size: 1.75rem;
+      line-height: 1.714;
+      letter-spacing: 0.142em;
+    }
+
+    @media (max-width: variables.$small) {
+      font-size: 1.25rem;
+      letter-spacing: 0.2em;
+    }
     color: $color;
     margin-bottom: 1.687rem;
   }
   div {
     width: 3.75rem;
     border-top: 1px solid $color;
+  }
+
+  @media (max-width: variables.$med) {
+    span {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  @media (max-width: variables.$small) {
+    span {
+      margin-bottom: 0.812rem;
+    }
   }
 }

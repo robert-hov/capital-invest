@@ -1,19 +1,32 @@
 import React from "react";
-import Language from "./Language";
 import Nav from "./Nav";
 import "./style.scss";
 import { nav } from "../../../dev-data";
 import { useScrollDirection } from "../../../hooks/useScrollDirection";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import { useEffect } from "react";
+import useScrollBlock from "../../../hooks/useScrollDisable";
 
-const Header = ({location}) => {
+const Header = ({ location }) => {
   const scrollDirection = useScrollDirection();
-
+  const [menuOpened, setMenuOpened] = useState(false);
+  const [blockScroll, allowScroll] = useScrollBlock();
+  useEffect(() => {
+    if (menuOpened) blockScroll();
+    else allowScroll();
+  }, [menuOpened]);
   return (
     <>
       <header
-        className={`header ${scrollDirection === "down" ? "down" : "up"} ${
-          scrollDirection === "top" ? "top" : null
+        className={`header${
+          scrollDirection === "down"
+            ? " down"
+            : scrollDirection === "up"
+            ? " up"
+            : ""
+        }${scrollDirection === "top" ? " top" : ""}${
+          menuOpened ? " header--active" : ""
         }`}
       >
         <div className="page-container">
@@ -25,8 +38,19 @@ const Header = ({location}) => {
                 </svg>
               </div>
             </Link>
-            <Nav location={location} down={scrollDirection} content={nav} />
-            <Language down={scrollDirection} />
+            <Nav
+              location={location}
+              direction={scrollDirection}
+              content={nav}
+              active={menuOpened}
+              setActive={setMenuOpened}
+            />
+            <button
+              onClick={() => setMenuOpened(!menuOpened)}
+              className={`hamburger-icon${menuOpened ? " active" : ""}`}
+            >
+              <span className="line"></span>
+            </button>
           </div>
         </div>
       </header>

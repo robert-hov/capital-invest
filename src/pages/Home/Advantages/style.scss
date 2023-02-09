@@ -1,12 +1,30 @@
+@use "../../../theme/variables.scss";
 @import "../../../theme/mixins.scss";
+@import "../../../theme/extends.scss";
 
 .advantages {
   padding-top: 1.875rem;
   padding-bottom: 2.593rem;
+
+  @media (max-width: variables.$med) {
+    padding-top: 1.937rem;
+    padding-bottom: 3.375rem;
+  }
+
+  @media (max-width: variables.$small) {
+    padding-top: 0.562rem;
+    padding-bottom: 2.687rem;
+  }
 }
 
 .advantages__title {
   @include section-title(var(--primary-sixth), 6.25rem);
+  @media (max-width: variables.$med) {
+    @include section-title(var(--primary-sixth), 2.281rem);
+  }
+  @media (max-width: variables.$small) {
+    @include section-title(var(--primary-sixth), 1.875rem);
+  }
 }
 
 .advantages__content {
@@ -22,17 +40,25 @@
   width: 17.384%;
   min-width: 14.062rem;
   margin-left: 8.615%;
+
+  @media (max-width: variables.$med) {
+    width: 37.372%;
+    margin-right: auto;
+    margin-left: unset;
+  }
+
+  @media (max-width: variables.$small) {
+    margin-left: 0.625rem;
+    width: auto;
+    max-width: 42.318%;
+    min-width: unset;
+  }
 }
 
 .advantages__text {
   color: var(--primary-sixth);
 
-  font-family: var(--primary-font);
-  font-size: 1.562rem;
-  font-weight: 200;
-  line-height: 1.208;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  @extend %body-2;
 }
 
 .advantages__img {
@@ -48,6 +74,21 @@
   img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
+  }
+
+  @media (max-width: variables.$med) {
+    width: 52.262%;
+    margin-right: 1.312rem;
+  }
+
+  @media (max-width: variables.$small) {
+    width: 44.057%;
+    margin-right: 0;
+    flex-shrink: 0;
+
+    &::before {
+      padding-top: 112.5%;
+    }
   }
 }

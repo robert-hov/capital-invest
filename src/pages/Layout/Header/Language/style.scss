@@ -1,17 +1,64 @@
+@use "../../../../theme/variables.scss";
+@import "../../../../theme/mixins.scss";
+
+@keyframes language-dropdown {
+  0% {
+    display: block;
+  }
+
+  99% {
+    display: block;
+  }
+
+  100% {
+    display: none;
+  }
+}
+
 .language {
+  position: relative;
   display: flex;
   align-items: center;
   cursor: pointer;
-  
-  &.up:not(.top) .language__icon-container {
+
+  &.up .language__icon-container {
     svg {
       stroke: var(--primary-forth);
     }
   }
 
-  &.up:not(.top) .language__text {
+  &.up .language__text {
     color: var(--primary-forth);
   }
+
+  &.up .language__dropdown {
+    background-color: var(--primary);
+
+    .language__dropdown-btn {
+      color: var(--primary-forth);
+
+      @include nav-links(var(--primary-forth))
+    }
+  }
+
+  &:hover {
+    .language__dropdown {
+      display: flex;
+      opacity: 100%;
+      transition: opacity 200ms ease-in;
+      
+    }
+  }
+}
+
+.language__container {
+  display: flex;
+  align-items: center;
+  padding: 0;
+
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .language__icon-container {
@@ -28,13 +75,76 @@
   svg {
     stroke: var(--primary);
   }
+
+  @media (max-width: variables.$med) {
+    width: 1.979rem;
+
+    svg {
+      stroke: var(--primary-eighth)
+    }
+  }
 }
 
 .language__text {
+  display: block;
+  width: 2rem;
+
   color: var(--primary);
 
+  font-family: var(--primary-font);
   font-size: 0.875rem;
   font-weight: 500;
   line-height: 1.22;
   text-transform: uppercase;
+
+  @media (max-width: variables.$med) {
+    color: var(--primary-eighth);
+
+    font-size: 1.25rem;
+    font-weight: 300;
+  }
+}
+
+.language__dropdown {
+  box-sizing: content-box;
+  animation: language-dropdown 1s ease;
+  opacity: 0;
+  transition: opacity 640ms cubic-bezier(1,0.01,0.94,-0.14);
+  position: absolute;
+  padding: 0 1rem 0.5rem;
+  top: calc(100% + 0.625rem);
+  right: -1rem;
+
+  flex-direction: column;
+  align-items: flex-start;
+  width: 2rem;
+}
+
+.language__dropdown-btn {
+  position: relative;
+  display: block;
+  padding: 0;
+  margin-bottom: 1rem;
+  width: 100%;
+
+  color: var(--primary);
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  font-family: var(--primary-font);
+  font-size: 0.875rem;
+  font-weight: 100;
+  line-height: 1.209;
+  text-align: start;
+  text-transform: uppercase;
+  @include nav-links(var(--primary));
+
+  @media (max-width: variables.$med) {
+    color: var(--primary-eighth);
+    @include nav-links(var(--primary-eighth));
+
+    font-size: 1.25rem;
+
+  }
 }

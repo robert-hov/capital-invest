@@ -1,3 +1,4 @@
+@use "../../../theme/variables.scss";
 @import "../../../theme/mixins.scss";
 @import "../../../theme/extends.scss";
 
@@ -8,6 +9,16 @@
 
   padding-top: 5.625rem;
   padding-bottom: 5.625rem;
+
+  @media (max-width: variables.$med) {
+    padding-top: 3.375rem;
+    padding-bottom: 4.875rem;
+  }
+
+  @media (max-width: variables.$small) {
+    padding-top: 0.625rem;
+    padding-bottom: 2.875rem;
+  }
 }
 
 .about__content {
@@ -17,16 +28,28 @@
 
   width: 42.638rem;
   max-width: 38.375rem;
+
+  @media (max-width: variables.$small) {
+    width: 82.608%;
+    margin: 0 auto;
+  }
 }
 
 .about__title {
   @include section-title(var(--primary-third), 2.75rem);
+
+  @media (max-width: variables.$med) {
+    @include section-title(var(--primary-third), 3.312rem);
+  }
+
+  @media (max-width: variables.$small) {
+    @include section-title(var(--primary-third), 1.562rem);
+    text-align: center;
+  }
 }
 
 .about__desc {
   color: var(--primary-third);
 
-  @extend %font-body;
-  text-transform: capitalize;
-  text-align: center;
+  @extend %body-1;
 }

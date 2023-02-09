@@ -1,6 +1,7 @@
 import React from "react";
 import { Parallax } from "react-parallax";
 import Button from "../../components/Button";
+import {useTranslation, withI18n} from 'react-i18next'
 import "./style.scss";
 
 const Hero = ({
@@ -10,9 +11,10 @@ const Hero = ({
   withButton = false,
   text,
   btnText,
-  logo,
+  logo = false,
+  t
 }) => {
-  const title = text.split("");
+  const title = t('hero').split("");
   return (
     <>
       <div
@@ -21,7 +23,18 @@ const Hero = ({
         }`}
       >
         <div className="hero__img">
-        <Parallax strength={300} bgImage={bgImg}>
+        <Parallax strength={300}
+         renderLayer={x => (
+          <div
+              style={{
+                  width: 'auto',
+                  height: '100%',
+              }}
+          />
+      )}
+      bgImageStyle={{minHeight: '100%', width: 'auto'}}
+        bgImage={bgImg}>
+          
           {/* <img src={bgImg} alt="capital invest" /> */}
         </Parallax>
         </div>
@@ -48,4 +61,4 @@ const Hero = ({
   );
 };
 
-export default Hero;
+export default withI18n()(Hero);

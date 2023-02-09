@@ -1,7 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { projectsData } from "../../dev-data";
-import Button from "../components/Button";
 import Hero from "../Home/Hero";
 import "./style.scss";
 
@@ -10,7 +9,7 @@ const ProjectInner = () => {
   const { title, content } = projectsData[params.id - 1];
   return (
     <>
-      <Hero inner={true} logo={content.logo} bgImg={content.cover} text={title} />
+      <Hero inner={true} bgImg={content.cover} text={title} />
       <section className="project-inner">
         <div className="page-container">
           <div className="project-inner__container">
@@ -33,7 +32,16 @@ const ProjectInner = () => {
               })}
             </div>
             <div className="project-inner__about">
-              <p className="project-inner__text project-inner__about-text">{content.about}</p>
+              <div className="project-inner__about-content">
+                <div className="project-inner__about-logo">
+                  <div className="img-container">
+                    <img src={content.logo} alt="logo" />
+                  </div>
+                </div>
+                <p className="project-inner__text project-inner__about-text">
+                  {content.about}
+                </p>
+              </div>
               <div className="project-inner__about-img">
                 <div className="img-container">
                   <img src={content.cover} alt="" />
@@ -51,8 +59,9 @@ const ProjectInner = () => {
                 );
               })}
             </div>
-            <p className="project-inner__text project-inner__address">{content.address}</p>
-            <Button text="more about project" color="black"/>
+            <p className="project-inner__text project-inner__address">
+              {content.address}
+            </p>
           </div>
         </div>
       </section>

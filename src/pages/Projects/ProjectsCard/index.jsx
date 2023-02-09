@@ -4,7 +4,6 @@ import Button from "../../components/Button";
 import './style.scss';
 
 const ProjecstCard = ({ content }) => {
-  const titleArr = content && content.title.split("");
   return (
     <div className="project-card">
       <h3 className="project-card__title">
@@ -17,11 +16,6 @@ const ProjecstCard = ({ content }) => {
           style={{ backgroundImage: `url(${content.img})` }}
         />
         <div className="project-card__content">
-          <h4 className="project-card__content-title">
-            {titleArr.map((el, i) => {
-              return <span key={i}>{el}</span>;
-            })}
-          </h4>
           <Button text="view" />
         </div>
       </Link>

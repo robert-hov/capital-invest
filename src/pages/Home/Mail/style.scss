@@ -1,3 +1,4 @@
+@use "../../../theme/variables.scss";
 @import "../../../theme/extends.scss";
 
 .mail {
@@ -11,8 +12,12 @@
 
   color: var(--primary-sixth);
 
-  @extend %font-title;
+  @extend %heading-2;
   text-align: left;
+
+  @media (max-width: variables.$small) {
+    margin-bottom: 0.937rem;
+  }
 }
 
 .mail__form {
@@ -28,6 +33,9 @@
   max-width: 74.875rem;
   margin-bottom: 6.437rem;
   margin-right: auto;
+  @media (max-width: 54rem) {
+    margin-bottom: 1.937rem;
+  }
 }
 
 .mail__form-inputs-top {
@@ -37,6 +45,15 @@
 
   .mail__form-input {
     width: 24.958%;
+  }
+
+  @media (max-width: 54rem) {
+    flex-direction: column;
+    margin-bottom: 0;
+    .mail__form-input {
+      width: 100%;
+      margin-bottom: 1.762rem;
+    }
   }
 }
 
@@ -58,8 +75,14 @@
   font-size: 1.062rem;
   font-weight: 400;
   line-height: 1.235;
+    letter-spacing: 0.064em;
 
   &::placeholder {
     color: var(--primary-third-20);
   }
-}
+
+  @media (max-width: variables.$small) {
+    font-size: 0.812rem;
+    line-height: 1.219;
+  }
+  }
