@@ -1,7 +1,7 @@
 import React from "react";
 import Hero from "../Home/Hero";
 import Mail from "../Home/Mail";
-import bgImg from "../../assets/hero/hero.png";
+import bgImg from "../../assets/hero/career.jpg";
 import Button from "../components/Button";
 import { useRef } from "react";
 import "./style.scss";

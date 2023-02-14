@@ -1,28 +1,71 @@
+@use "../../theme/variables.scss";
 @import "../../theme/mixins.scss";
 
 .contacts {
   padding-top: 3.312rem;
   padding-bottom: 10.187rem;
+
+  @media (max-width: variables.$med) {
+    padding-bottom: 2.125rem;
+  }
 }
 
 .contact__content {
-  margin-left: 1.312rem; 
+  margin-left: 1.312rem;
 }
 
 .contact__container {
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: variables.$med) {
+    flex-direction: column;
+  }
+}
+
+.contact__cards {
+  @media (max-width: variables.$med) {
+    display: flex;
+    margin-bottom: 6.25rem;
+  }
+
+  @media (max-width: variables.$small) {
+    flex-direction: column;
+  }
 }
 
 .contact__card {
   max-width: 18.625rem;
+
   &:not(:last-child) {
     margin-bottom: 5.062rem;
+  }
+
+  @media (max-width: variables.$med) {
+    margin-bottom: 0;
+
+    &--address {
+      max-width: 43.421%;
+      margin-right: auto;
+    }
+
+    &--smm {
+      margin-right: 3.437rem;
+    }
+  }
+
+  @media (max-width: variables.$med) {
+    &--address,
+    &--smm {
+      width: 100%;
+      max-width: unset;
+    }
   }
 }
 
 .contact__card-title {
   @include section-title(var(--primary-sixth), 1.625rem, flex-start);
+
   span {
     text-align: left;
   }
@@ -71,5 +114,9 @@
     content: '';
     display: block;
     padding-top: 60.869%;
+  }
+
+  @media (max-width: variables.$med) {
+    width: 100%;
   }
 }

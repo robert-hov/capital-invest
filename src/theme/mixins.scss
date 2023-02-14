@@ -107,7 +107,7 @@
 
   &:hover,
   a:hover & {
-    @media (min-width: $mq-large) {
+    @media (min-width: variables.$large) {
       cursor: pointer;
 
       &::before {
@@ -181,20 +181,23 @@
 
     &:hover,
     a:hover & {
-      @media (min-width: $mq-large) {
+      @media (min-width: variables.$large) {
       }
     }
   }
 
-  &:hover {
-    > span::before {
-      width: 0;
-      transition: 0.4s;
-    }
+  @media (min-width: variables.$large) {
 
-    > span > span {
-      transform: translateX(0);
-      transition: transform 0.4s ease;
+    &:hover {
+      > span::before {
+        width: 0;
+        transition: 0.4s;
+      }
+
+      > span > span {
+        transform: translateX(0);
+        transition: transform 0.4s ease;
+      }
     }
   }
 }

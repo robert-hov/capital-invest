@@ -42,13 +42,17 @@ const ServicesSwiper = ({ content }) => {
             swiperRef.current = swiper;
           }}
           breakpoints={{
-            320: {
+            0: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            375: {
               slidesPerView: 2,
               spaceBetween: 20,
             },
-            1250: {
+            512: {
               slidesPerView: 3,
-              spaceBetween: 50,
+              spaceBetween: 20,
             },
           }}
         >

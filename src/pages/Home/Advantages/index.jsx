@@ -12,13 +12,13 @@ const Advantages = (props) => {
             <div />
           </h2>
           <div className="advantages__content">
-            <div className="advantages__text-container">
-              <span className="advantages__text">professional team</span>
-              <span className="advantages__text">
+            <ol className="advantages__text-container">
+              <li className="advantages__text">professional team</li>
+              <li className="advantages__text">
                 Stable position in the market
-              </span>
-              <span className="advantages__text">Competitive price policy</span>
-            </div>
+              </li>
+              <li className="advantages__text">Competitive price policy</li>
+            </ol>
             <div className="advantages__img">
               <div className="img-container">
                 <img src={tsaghkadzor} alt="advantage" />

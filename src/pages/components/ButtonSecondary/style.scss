@@ -1,5 +1,5 @@
+@use "../../../theme/variables.scss";
 @import "../../../theme/mixins.scss";
-@import "../../../theme/variables.scss";
 
 .button-secondary {
   display: flex;
@@ -8,10 +8,19 @@
 
   background-color: var(--primary-third-80);
   transition: background-color 0.75s cubic-bezier(0.4, 0, 0.2, 1);
-  @include btn-link($primary);
+  @include btn-link(variables.$primary);
   text-decoration: none;
-  &:hover {
-    background-color: var(--primary-third);
+
+  @media (min-width: variables.$large) {
+    &:hover {
+      background-color: var(--primary-third);
+    }
+  }
+
+  @media (max-width: variables.$med) {
+    background-color: var(--primary);
+    box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
+    @include btn-link(var(--primary-sixth));
   }
 }
 

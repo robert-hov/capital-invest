@@ -18,7 +18,7 @@
   }
 
   @media (max-width:variables.$small) {
-    padding-top: 0.562rem;
+    padding-top: 2.562rem;
     padding-bottom: 2.875rem;
 
     .page-container {
@@ -37,6 +37,7 @@
 
   @media (max-width:variables.$small) {
     @include section-title(var(--primary), 2.437rem);
+    margin-bottom: 3.437rem;
   }
 }
 

@@ -42,7 +42,7 @@ const PartnersSwiper = ({content}) => {
         modules={[Pagination]}
         breakpoints={{
           320: {
-            slidesPerView: 4.2,
+            slidesPerView: 3.2,
             spaceBetween: 20,
           },
           900: {

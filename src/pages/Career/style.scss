@@ -1,3 +1,4 @@
+@use "../../theme/variables.scss";
 @import "../../theme/extends.scss";
 @import "../../theme/mixins.scss";
 
@@ -23,6 +24,15 @@
 
   width: 43.076%;
   min-width: 34.375rem;
+
+  @media (max-width: variables.$med) {
+    width: 81.871%;
+    min-width: unset;
+  }
+
+  @media (max-width: variables.$small) {
+    width: 100%;
+  }
 }
 
 .career__input-container {

@@ -115,12 +115,6 @@
 .services__slide-text-contianer {
   display: flex;
   justify-content: center;
-  align-items: center;
-  min-height: 9rem;
-
-  @media (max-width: variables.$med) {
-    min-height: 3.5rem;
-  }
 }
 
 .services__slide-text {
@@ -129,12 +123,13 @@
 
   color: var(--primary-sixth);
 
-  font-family: var(--primary-font);
-  font-size: 1.5rem;
-  font-weight: 300;
-  line-height: 2;
-  letter-spacing: 4px;
-  text-transform: uppercase;
+  //font-family: var(--primary-font);
+  //font-size: 1.25rem;
+  //font-weight: 300;
+  //line-height: 2.4;
+  //letter-spacing: 4px;
+  //text-transform: uppercase;
+  @extend %heading-4;
 
   @media (max-width: variables.$med) {
     font-size: 1rem;

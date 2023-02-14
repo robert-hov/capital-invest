@@ -17,6 +17,7 @@ const Services = (props) => {
           <ServicesSwiper content={serviceSlides} />
         </div>
       </section>
+      {/*  TODO: Button- e mobile i jamanak darna spitak*/}
       <ButtonSecondary text="See more" link="/services" />
     </>
   );

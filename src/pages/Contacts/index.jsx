@@ -1,7 +1,7 @@
 import React from "react";
 import Hero from "../Home/Hero";
 import Mail from "../Home/Mail";
-import bgImg from "../../assets/hero/hero.png";
+import bgImg from "../../assets/hero/contact.jpg";
 import Smm from "../Layout/Footer/Smm";
 import "./style.scss";
 
@@ -25,7 +25,7 @@ const ContactPage = (props) => {
                   <p className="contact__card-text">+374 98 99 99 99</p>
                   <span className="contact__card-mail">inquiry@sprec.com</span>
                 </div>
-                <div className="contact__card contact__card--address">
+                <div className="contact__card contact__card--smm">
                   <h3 className="contact__card-title">
                     <span>Social media</span>
                     <div />
