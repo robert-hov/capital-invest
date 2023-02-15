@@ -17,7 +17,7 @@ const Mail = ({bgColor = 'var(--primary)', t}) => {
                         </div>
                         <input type="mail" placeholder={t('mail.placeholders.email')} className="mail__form-input"/>
                     </div>
-                    <Button color='black' text="send"/>
+                    <Button color='black' text={t('buttons.primary')}/>
                 </form>
             </div>
         </div>

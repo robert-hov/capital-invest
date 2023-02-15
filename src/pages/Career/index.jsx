@@ -4,9 +4,10 @@ import Mail from "../Home/Mail";
 import bgImg from "../../assets/hero/career.jpg";
 import Button from "../components/Button";
 import { useRef } from "react";
+import {withI18n} from 'react-i18next';
 import "./style.scss";
 
-const CareerPage = (props) => {
+const CareerPage = ({t}) => {
   const formRef = useRef();
   return (
     <>
@@ -54,7 +55,7 @@ const CareerPage = (props) => {
                   className="career__input"
                 />
               </div>
-              <Button color="black" text="send" click={() => console.log(formRef)} />
+              <Button color="black" text={t('buttons.primary')} click={() => console.log(formRef)} />
             </form>
           </div>
         </div>
@@ -64,4 +65,4 @@ const CareerPage = (props) => {
   );
 };
 
-export default CareerPage;
+export default withI18n()(CareerPage);

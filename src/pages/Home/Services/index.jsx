@@ -19,7 +19,7 @@ const Services = ({t}) => {
         </div>
       </section>
       {/*  TODO: Button- e mobile i jamanak darna spitak*/}
-      <ButtonSecondary text="See more" link="/services" />
+      <ButtonSecondary text={t('buttons.secondary')} link="/services" />
     </>
   );
 };
