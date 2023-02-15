@@ -14,7 +14,7 @@ const ServicePage = ({t}) => {
         <div className="page-container">
           <div className="service-page__container">
             <h2 className="service-page__title">
-              Capital invest group offers you such services as
+                {t('services.description')}
             </h2>
             <div className="service-card">
               <ul className="service-card__list">

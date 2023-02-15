@@ -63,6 +63,8 @@ html[lang="rus"] {
 }
 
 .nav__item {
+  display: flex;
+  align-items: center;
   @media (max-width: variables.$med) {
     margin-bottom: 1.687rem;
       opacity: 0;
