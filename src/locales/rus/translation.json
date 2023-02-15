@@ -27,6 +27,7 @@
   },
   "services": {
     "title": "SERVICES",
+    "description":  "Capital invest group offers you such services as",
     "items": {
       "law": "Юридические услуги",
       "percent": "Организация и выполнение продаж",
