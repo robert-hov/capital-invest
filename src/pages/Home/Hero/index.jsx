@@ -1,5 +1,4 @@
 import React from "react";
-import {Parallax} from "react-parallax";
 import Button from "../../components/Button";
 import {withI18n} from 'react-i18next'
 import "./style.scss";

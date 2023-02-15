@@ -2,7 +2,6 @@ import React from "react";
 import Hero from "../Home/Hero";
 import Mail from "../Home/Mail";
 import bgImg from "../../assets/hero/contact.jpg";
-import Smm from "../Layout/Footer/Smm";
 import "./style.scss";
 
 const ContactPage = (props) => {
