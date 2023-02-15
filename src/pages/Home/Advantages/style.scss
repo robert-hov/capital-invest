@@ -37,6 +37,12 @@
   }
 }
 
+html[lang="rus"] {
+  .advantages__text-container {
+    margin: 0 0 0 0.615%;
+  }
+}
+
 .advantages__text-container {
   display: flex;
   flex-direction: column;
@@ -55,6 +61,7 @@
   }
 
   @media(max-width: 610px) {
+    width: 84%;
     counter-reset: li;
     list-style: none;
     *list-style: decimal;
