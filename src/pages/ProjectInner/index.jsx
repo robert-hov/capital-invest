@@ -3,8 +3,8 @@ import { useParams } from "react-router-dom";
 import { projectsData } from "../../dev-data";
 import Hero from "../Home/Hero";
 import "./style.scss";
-
-const ProjectInner = () => {
+import {withI18n} from 'react-i18next'
+const ProjectInner = ({t}) => {
   const params = useParams();
   const { title, content } = projectsData[params.id - 1];
   return (
@@ -14,11 +14,11 @@ const ProjectInner = () => {
         <div className="page-container">
           <div className="project-inner__container">
             <h2 className="project-inner__title">
-              <span>{title}</span>
+              <span>{t(title)}</span>
               <div />
             </h2>
             <p className="project-inner__text projects-inner__desc">
-              {content.description}
+              {t(content.description)}
             </p>
             <div className="project-inner__gallery">
               {content.imagesTop.map((el, i) => {
@@ -39,7 +39,7 @@ const ProjectInner = () => {
                   </div>
                 </div>
                 <p className="project-inner__text project-inner__about-text">
-                  {content.about}
+                  {t(content.about)}
                 </p>
               </div>
               <div className="project-inner__about-img">
@@ -60,7 +60,7 @@ const ProjectInner = () => {
               })}
             </div>
             <p className="project-inner__text project-inner__address">
-              {content.address}
+              {t(content.address)}
             </p>
           </div>
         </div>
@@ -69,4 +69,4 @@ const ProjectInner = () => {
   );
 };
 
-export default ProjectInner;
+export default withI18n()(ProjectInner);

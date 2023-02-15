@@ -22,13 +22,18 @@
   @extend %heading-2;
   text-align: center;
 
+  @media (max-width: variables.$small) {
+    font-family: var(--secondary-font);
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 1.5;
+  }
+
   @media (max-width: variables.$med) {
     margin: 2.25rem auto;
 
-    font-family: var(--secondary-font);
     font-size: 1.25rem;
     line-height: 2;
-    font-weight: 500;
     letter-spacing: 4px;
   }
 }
@@ -53,6 +58,9 @@
 
 .service-card__item-container {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 10.125rem;
   padding: 2.062rem 12.539%;
 
@@ -60,6 +68,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: unset;
     padding: 2rem 1rem;
   }
 }

@@ -4,8 +4,9 @@ import Hero from "../Home/Hero";
 import Mail from "../Home/Mail";
 import bgImg from "../../assets/hero/service.jpg";
 import { serviceSlides } from "../../dev-data";
+import {withI18n} from 'react-i18next';
 
-const ServicePage = (props) => {
+const ServicePage = ({t}) => {
   return (
     <>
       <Hero other={true} text="services" bgImg={bgImg} />
@@ -18,7 +19,6 @@ const ServicePage = (props) => {
             <div className="service-card">
               <ul className="service-card__list">
                 {serviceSlides.map((el, i) => {
-                  console.log(el.content)
                   return (
                     <li key={i} className="service-card__item">
                       <div className="service-card__item-container">
@@ -29,7 +29,7 @@ const ServicePage = (props) => {
                             </svg>
                           </div>
                         </div>
-                        <h3 className="service-card__title">{el.content}</h3>
+                        <h3 className="service-card__title">{t(el.content)}</h3>
                       </div>
                     </li>
                   );
@@ -44,4 +44,4 @@ const ServicePage = (props) => {
   );
 };
 
-export default ServicePage;
+export default withI18n()(ServicePage);

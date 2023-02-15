@@ -250,3 +250,11 @@
     }
   }
 }
+
+@mixin nth-trans-delay($delay_items: 7, $delay_time: 0.2s){
+  @for $i from 1 through $delay_items {
+    &:nth-child(#{$i}) {
+      transition-delay: ($delay_time * $i);
+    }
+  }
+}

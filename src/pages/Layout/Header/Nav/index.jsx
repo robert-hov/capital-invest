@@ -2,8 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./style.scss";
 import Language from "../Language";
+import {withI18n} from 'react-i18next'
 
-const Nav = ({ content, direction, location, active, setActive }) => {
+const Nav = ({ content, direction, location, active, setActive, t }) => {
   return (
     <nav
       className={`nav${
@@ -22,7 +23,7 @@ const Nav = ({ content, direction, location, active, setActive }) => {
                   }`}
                   onClick={() => setActive(false)}
                 >
-                  {el.text}
+                  {t(el.text)}
                 </Link>
               </li>
             );
@@ -35,4 +36,4 @@ const Nav = ({ content, direction, location, active, setActive }) => {
   );
 };
 
-export default Nav;
+export default withI18n()(Nav);

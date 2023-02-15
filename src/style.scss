@@ -51,8 +51,9 @@ html {
   --mq-xxxlarge: 130rem;
 }
 
-html[data-theme="night"] {
-  --primary: rgba(0, 0, 0, 1);
+html[lang="arm"] {
+  --primary-font: montserrat, sans-serif;
+  --primary-font-helvetica: montserrat, sans-serif;
 }
 
 body {

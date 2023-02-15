@@ -116,6 +116,13 @@
     padding-top: 60.869%;
   }
 
+  >iframe {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+  }
+
   @media (max-width: variables.$med) {
     width: 100%;
   }

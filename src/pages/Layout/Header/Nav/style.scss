@@ -1,7 +1,13 @@
 @use "../../../../theme/variables.scss";
 @import "../../../../theme/mixins.scss";
+@import "../../../../theme/config.scss";
 @import "../../../../theme/extends.scss";
-
+html[lang="arm"],
+html[lang="rus"] {
+  .nav {
+    width: 87.923%;
+  }
+}
 .nav {
   display: flex;
   align-items: center;
@@ -20,7 +26,7 @@
     align-items: flex-start;
     position: fixed;
     inset: 0;
-    width: 100%;
+    width: 100%!important;
     height: 100%;
 
     padding: 9.187rem 4.375rem 2rem;
@@ -29,6 +35,12 @@
 
     &--active {
       display: flex;
+      .nav__item {
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity 2s 0.5s ease, transform 2s 0.5s $ease-cb2;
+        @include nth-ani-delay(6, 0.15s);
+      }
     }
   }
 
@@ -53,6 +65,9 @@
 .nav__item {
   @media (max-width: variables.$med) {
     margin-bottom: 1.687rem;
+      opacity: 0;
+      transform: translateY(-1rem);
+      transition:opacity 0.5s $ease-cb2, transform 0.4s $ease-cb2;
   }
 
   @media (max-width: variables.$small) {
@@ -132,3 +147,18 @@
     }
   }
 }
+
+//@media (max-width: variables.$med) {
+//  .nav .nav__item {
+//    opacity: 0;
+//    transform: translateY(-1rem);
+//    transition:opacity 0.5s $ease-cb2, transform 0.4s $ease-cb2;
+//  }
+//
+//  .nav.nav--active .nav__item {
+//    opacity: 1;
+//    transform: translateY(0);
+//    transition: opacity 2s 0.5s ease, transform 2s 0.5s $ease-cb2;
+//    @include nth-trans-delay(6, 0.15s);
+//  }
+//}

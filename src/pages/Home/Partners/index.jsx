@@ -6,8 +6,9 @@ import legal from "../../../assets/img/partners/legal.png";
 import tsaghkadzorLogo from "../../../assets/img/partners/tsaghkadzorLogo.png";
 import dilijanLogo from "../../../assets/img/partners/dilijanLogo.png";
 import PartnersSwiper from "./PartnersSwiper";
+import {withI18n} from 'react-i18next'
 
-const Partners = (props) => {
+const Partners = ({t}) => {
   const slides = [
     {
       img: abb,
@@ -40,7 +41,7 @@ const Partners = (props) => {
       <div className="page-container">
         <div className="partners__container">
           <h2 className="partners__title">
-            <span>partners</span>
+            <span>{t('partners')}</span>
             <div />
           </h2>
           <PartnersSwiper content={slides} />
@@ -50,4 +51,4 @@ const Partners = (props) => {
   );
 };
 
-export default Partners;
+export default withI18n()(Partners);

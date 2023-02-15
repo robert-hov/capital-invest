@@ -1,3 +1,62 @@
 {
-  "hero": "world of luxury living en"
+  "hero": "world of luxury living",
+  "nav": {
+    "home": "home",
+    "projects": "projects",
+    "services": "services",
+    "career": "career",
+    "contacts": "contacts"
+  },
+  "about": {
+    "title": "Capital invest group",
+    "description": "operates in the field of real estate and business management in 4 regions of the Republic of Armenia Yerevan, Tavush, Ararat and Kotayk."
+  },
+  "advantage": {
+    "title": "OUR ADVANTAGES",
+    "texts": {
+      "text1": "professional team",
+      "text2": "Stable position in the market",
+      "text3": "Competitive price policy"
+    }
+  },
+  "services": {
+    "title": "SERVICES",
+    "items": {
+      "law": "Legal services",
+      "percent": "organization and implementation of sales",
+      "rocket": "Project management",
+      "research": "Market research and analysis",
+      "ad": "ADVERTISING IMPLEMENTATION",
+      "finance": "fINANCIAL MANAGEMENT",
+      "books": "organiziNG and RELYING of DOCUMENTATION",
+      "buildings": "cREATION, ANALYSIS AND IMPLEMENTATION OF INVESTMENT PLANS"
+    }
+  },
+  "partners": " partners",
+  "mail": {
+    "title": "Get in touch",
+    "placeholders": {
+      "name": "Name*",
+      "number": "Contacts*",
+      "email": "Email*"
+    }
+  },
+  "buttons": {
+    "primary": "send",
+    "secondary": "see more"
+  },
+  "projects": {
+    "tsaghkadzor": {
+      "title": "Tsaghkadzor hills aparts and villas",
+      "desc": "Tsaghkadzor Hills is A  multifunctional residential complex, composed of 2 multifunctional buildings, 60 private houses, 3 three-story multifunctional buildings and 4 four-story multifunctional buildings.",
+      "about": "Outdoor and indoor swimming pools,  Gym, Playground, Cafes, Banquet hall and number of other entertainment and luxury sites.",
+      "address": "Our address: RA, Gegharkunik Marz, Tsaghkadzor, Saralanji 1."
+    },
+    "dilijan": {
+      "title": "dILIJAN HILLS",
+      "desc": "DILIJAN HILLS residential area offers two storey  detached houses. You can buy the apartments both  with renovated  kitchen furniture and without. Total area: 220-292 square meters",
+      "about": "4 bedrooms, 2 bathrooms, balcony, mansion area: 115 square meters, private land, private parking.",
+      "address": "Our address: RA, Tavush Marz, Dilijan, Shahumyan str. 17b:"
+    }
+  }
 }

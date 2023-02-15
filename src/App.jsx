@@ -8,14 +8,26 @@ import ProjectInner from "./pages/ProjectInner";
 import ProjectsPage from "./pages/Projects";
 import ServicePage from "./pages/Services";
 import { withNamespaces } from 'react-i18next';
+import {detectLanguage} from "./utils/hellper";
+import i18n from "./i18n";
 
 function App() {
+  document.documentElement.lang = i18n.language;
   const location = useLocation();
   const [curLocation, setCurLocation] = useState(location);
+  const changeLanguage = () => {
+    detectLanguage()
+  }
   document.title = `CAPITAL INVEST`;
   useEffect(() => {
     setCurLocation(location);
   }, [location]);
+  useEffect(() => {
+    window.addEventListener('load', changeLanguage)
+    return () => {
+      window.removeEventListener('load', changeLanguage)
+    }
+  }, [])
   return (
     <div className="App">
       <Layout location={curLocation}>

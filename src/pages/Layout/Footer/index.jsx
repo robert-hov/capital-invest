@@ -26,7 +26,7 @@ const Footer = (props) => {
               Nairi ZarYan st. 17/1
             </span>
             <span className="footer__right-text footer__right-text--tel">
-              +374098888888
+              +374 95 119811
             </span>
             <Smm />
           </div>

@@ -12,165 +12,133 @@ import dilijanLogo from "./assets/img/porjects/dilijan/dilijanLogo.png";
 import tsaghkadzorLogo from "./assets/img/porjects/tsaghkadzor/tsaghkadzorLogo.png";
 
 export const nav = [
-  {
-    link: "/",
-    text: "home",
-  },
-  {
-    link: "/projects",
-    text: "projects",
-  },
-  {
-    link: "/services",
-    text: "services",
-  },
-  {
-    link: "/career",
-    text: "career",
-  },
-  {
-    link: "/contacts",
-    text: "contacts",
-  },
+    {
+        link: "/",
+        text: "nav.home",
+    },
+    {
+        link: "/projects",
+        text: "nav.projects",
+    },
+    {
+        link: "/services",
+        text: "nav.services",
+    },
+    {
+        link: "/career",
+        text: "nav.career",
+    },
+    {
+        link: "/contacts",
+        text: "nav.contacts",
+    },
 ];
 
 export const footerNav = [
-  {
-    link: "/projects",
-    text: "projects",
-  },
-  {
-    link: "/career",
-    text: "career",
-  },
-  {
-    link: "/services",
-    text: "services",
-  },
+    {
+        link: "/projects",
+        text: "nav.projects",
+    },
+    {
+        link: "/career",
+        text: "nav.career",
+    },
+    {
+        link: "/services",
+        text: "nav.services",
+    },
 ];
 
 export const projectsData = [
-  {
-    id: 1,
-    title: "Tsaghkadzor hills aparts and villas",
-    img: tsaghkadzor,
-    content: {
-      description:
-        "Tsaghkadzor Hills multifunctional residential complex, 2 high-rise, multifunctional building, 60 private houses, 3 three-story multifunctional building, 4 four-story multifunctional building.",
-      cover: tsaghkadzor,
-      imagesTop: [t1, t2, t3, t4],
-      imagesBottom: [t1, t2, t3, t4],
-      about:
-        "In Tsaghkadzor Hills awaits you: Outdoor swimming pool, Indoor swimming pool, Gym, Playground, Cafes, Banquet hall and a number of other entertainment places.",
-      address: (
-        <>
-          <b>Our address:</b> RA, Gegharkunik Marz, Tsaghkadzor, Saralanji 1.
-        </>
-      ),
-      logo: tsaghkadzorLogo,
+    {
+        id: 1,
+        title: "projects.tsaghkadzor.title",
+        img: tsaghkadzor,
+        content: {
+            description:
+                "projects.tsaghkadzor.desc",
+            cover: tsaghkadzor,
+            imagesTop: [t1, t2, t3, t4],
+            imagesBottom: [t1, t2, t3, t4],
+            about:
+                "projects.tsaghkadzor.about",
+            address: "projects.tsaghkadzor.address",
+            logo: tsaghkadzorLogo,
+        },
     },
-  },
-  {
-    id: 2,
-    title: "diLIJAN HILLS",
-    img: dilijan,
-    content: {
-      desctiption: 'DILIJAN HILLS esidential area offers two-storey detached houses. You can buy the apartments both renovated with kitchen furniture and without renovation. Total plot area: 220-292 square meters',
-      cover: dilijan,
-      imagesTop: [d1, d2, d3, d4],
-      imagesBottom: [d1, d2, d3, d4],
-      about:
-        "The mansion has: 4 bedrooms, 2 bathrooms, balcony, mansion area: 115 square meters, private land, private parking.",
-      address: (
-        <>
-          <b>Our address:</b> RA, Gegharkunik Marz, Tsaghkadzor, Saralanji 1.
-        </>
-      ),
-      logo: dilijanLogo,
+    {
+        id: 2,
+        title: "projects.dilijan.title",
+        img: dilijan,
+        content: {
+            desctiption: 'projects.dilijan.desc',
+            cover: dilijan,
+            imagesTop: [d1, d2, d3, d4],
+            imagesBottom: [d1, d2, d3, d4],
+            about:
+                "projects.dilijan.about",
+            address: "projects.dilijan.address",
+            logo: dilijanLogo,
+        },
     },
-  },
 ];
 
-export  const serviceSlides = [
-  {
-    icon: {
-      hrefLink: "law",
-      alt: "law icon",
+export const serviceSlides = [
+    {
+        icon: {
+            hrefLink: "law",
+            alt: "law icon",
+        },
+        content: "services.items.law",
     },
-    content: <>Legal services</>,
-  },
-  {
-    icon: {
-      hrefLink: "discount",
-      alt: "discount icon",
+    {
+        icon: {
+            hrefLink: "discount",
+            alt: "discount icon",
+        },
+        content: "services.items.percent",
     },
-    content: (
-      <>
-        organization and implementation of sales
-      </>
-    ),
-  },
-  {
-    icon: {
-      hrefLink: "rocket",
-      alt: "rocket icon",
+    {
+        icon: {
+            hrefLink: "rocket",
+            alt: "rocket icon",
+        },
+        content: "services.items.rocket",
     },
-    content: <>Project management</>,
-  },
-  {
-    icon: {
-      hrefLink: "research",
-      alt: "research icon",
+    {
+        icon: {
+            hrefLink: "research",
+            alt: "research icon",
+        },
+        content: "services.items.research",
     },
-    content: (
-      <>
-        Market research and analysis
-      </>
-    ),
-  },
-  {
-    icon: {
-      hrefLink: "ad",
-      alt: "ad icon",
+    {
+        icon: {
+            hrefLink: "ad",
+            alt: "ad icon",
+        },
+        content: "services.items.ad",
     },
-    content: (
-      <>
-        ADVERTISING IMPLEMENTATION
-      </>
-    ),
-  },
-  {
-    icon: {
-      hrefLink: "finance",
-      alt: "finance icon",
+    {
+        icon: {
+            hrefLink: "finance",
+            alt: "finance icon",
+        },
+        content: "services.items.finance",
     },
-    content: (
-      <>
-        Financial management
-      </>
-    ),
-  },
-  {
-    icon: {
-      hrefLink: "books",
-      alt: "books icon",
+    {
+        icon: {
+            hrefLink: "books",
+            alt: "books icon",
+        },
+        content: "services.items.books",
     },
-    content: (
-      <>
-        organiziNG and RELYING of DOCUMENTATION
-      </>
-    ),
-  },
-  {
-    icon: {
-      hrefLink: "buildings",
-      alt: "buildings icon",
+    {
+        icon: {
+            hrefLink: "buildings",
+            alt: "buildings icon",
+        },
+        content: "services.items.buildings",
     },
-    content: (
-      <>
-        cREATION, ANALYSIS AND IMPLEMENTATION OF INVESTMENT PLANS
-      </>
-    ),
-  },
 ];
 

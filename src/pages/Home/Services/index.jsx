@@ -3,15 +3,16 @@ import ServicesSwiper from "./ServicesSwiper";
 import "./style.scss";
 import ButtonSecondary from "../../components/ButtonSecondary";
 import { serviceSlides } from "../../../dev-data";
+import {withI18n} from 'react-i18next';
 
-const Services = (props) => {
+const Services = ({t}) => {
  
   return (
     <>
       <section className="services">
         <div className="page-container">
           <h2 className="services__title">
-            <span>services</span>
+            <span>{t('services.title')}</span>
             <div />
           </h2>
           <ServicesSwiper content={serviceSlides} />
@@ -23,4 +24,4 @@ const Services = (props) => {
   );
 };
 
-export default Services;
+export default withI18n()(Services);

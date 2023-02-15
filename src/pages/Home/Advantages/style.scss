@@ -92,7 +92,7 @@
     transition: all .3s ease-out;
 
     &::before {
-      content: counter(li);
+      content: '';
       counter-increment: li;
       position: absolute;
       left: -1.3em;
@@ -101,7 +101,7 @@
       align-items: center;
       justify-content: center;
       margin-top: -1em;
-      background: var(--primary-forth);
+      background: var(--primary-fifth);
       height: 2em;
       width: 2em;
       line-height: 1;

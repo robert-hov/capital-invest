@@ -6,8 +6,9 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { Pagination } from "swiper";
+import {withI18n} from 'react-i18next'
 
-const ServicesSwiper = ({ content }) => {
+const ServicesSwiper = ({ content, t }) => {
   const swiperRef = useRef();
   const [disabled, setDisabled] = useState({ isBeggining: true, isEnd: false });
 
@@ -68,7 +69,7 @@ const ServicesSwiper = ({ content }) => {
                     </div>
                   </div>
                   <div className="services__slide-text-contianer">
-                    <span className="services__slide-text">{el.content}</span>
+                    <span className="services__slide-text">{t(el.content)}</span>
                   </div>
                 </div>
               </SwiperSlide>
@@ -92,4 +93,4 @@ const ServicesSwiper = ({ content }) => {
   );
 };
 
-export default ServicesSwiper;
+export default withI18n()(ServicesSwiper);

@@ -40,15 +40,6 @@
       @include nav-links(var(--primary-forth))
     }
   }
-
-  &:hover {
-    .language__dropdown {
-      display: flex;
-      opacity: 100%;
-      transition: opacity 200ms ease-in;
-      
-    }
-  }
 }
 
 .language__container {
@@ -107,8 +98,6 @@
 
 .language__dropdown {
   box-sizing: content-box;
-  animation: language-dropdown 1s ease;
-  opacity: 0;
   transition: opacity 640ms cubic-bezier(1,0.01,0.94,-0.14);
   position: absolute;
   padding: 0 1rem 0.5rem;
@@ -118,6 +107,14 @@
   flex-direction: column;
   align-items: flex-start;
   width: 2rem;
+
+  &::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .language__dropdown-btn {
