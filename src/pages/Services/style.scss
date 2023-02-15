@@ -15,6 +15,16 @@
   }
 }
 
+html[lang="arm"] {
+  @media (max-width: variables.$small) {
+    .service-page__title {
+      font-size: 1rem;
+      width: 90%;
+      text-transform: capitalize;
+    }
+  }
+}
+
 .service-page__title {
   width: 65.230%;
   margin: 3.875rem auto 5.5rem;
@@ -101,6 +111,12 @@
     margin-bottom: 1rem;
     left: 0;
     top: 0;
+  }
+}
+
+html[lang="arm"] {
+  .service-card__title {
+    font-size: 0.8rem;
   }
 }
 
