@@ -71,7 +71,7 @@ export const projectsData = [
         title: "projects.dilijan.title",
         img: dilijan,
         content: {
-            desctiption: 'projects.dilijan.desc',
+            description: 'projects.dilijan.desc',
             cover: dilijan,
             imagesTop: [d1, d2, d3, d4],
             imagesBottom: [d1, d2, d3, d4],
