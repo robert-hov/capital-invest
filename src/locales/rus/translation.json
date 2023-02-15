@@ -1,5 +1,11 @@
 {
-  "hero": "гарантированный срок ваших инвестиций",
+  "hero": {
+    "home": "гарантированный срок ваших инвестиций",
+    "services": "services",
+    "contacts": "contacts",
+    "career": "career",
+    "projects": "projects"
+  },
   "nav": {
     "home": "главная",
     "projects": "проекты",

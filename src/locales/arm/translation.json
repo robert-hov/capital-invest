@@ -1,5 +1,11 @@
 {
-  "hero": "Ներդրումների ապահով տևողություն",
+  "hero": {
+    "home": "Ներդրումների ապահով տևողություն",
+    "services": "services",
+    "contacts": "contacts",
+    "career": "career",
+    "projects": "projects"
+  },
   "nav": {
     "home": "գԼԽԱՎՈՐ",
     "projects": "նԱԽԱԳԾԵՐ",

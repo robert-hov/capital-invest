@@ -14,7 +14,7 @@ const Hero = ({
                   logo = false,
                   t
               }) => {
-    const title = t('hero').split("");
+    const title = t(text).split("");
     return (
         <>
             <div
@@ -23,20 +23,20 @@ const Hero = ({
                 }`}
             >
                 <div className="hero__img">
-                    <Parallax strength={300}
-                              renderLayer={x => (
-                                  <div
-                                      style={{
-                                          width: 'auto',
-                                          height: '100%',
-                                      }}
-                                  />
-                              )}
-                              bgImageStyle={{minHeight: '100%', width: 'auto'}}
-                              bgImage={bgImg}>
+                    {/*<Parallax strength={300}*/}
+                    {/*          renderLayer={x => (*/}
+                    {/*              <div*/}
+                    {/*                  style={{*/}
+                    {/*                      width: 'auto',*/}
+                    {/*                      height: '100%',*/}
+                    {/*                  }}*/}
+                    {/*              />*/}
+                    {/*          )}*/}
+                    {/*          bgImageStyle={{minHeight: '100%', width: 'auto'}}*/}
+                    {/*          bgImage={bgImg}>*/}
 
-                        {/* <img src={bgImg} alt="capital invest" /> */}
-                    </Parallax>
+                         <img src={bgImg} alt="capital invest" />
+                    {/*</Parallax>*/}
                 </div>
                 <div className="hero__content">
                     {logo ? (

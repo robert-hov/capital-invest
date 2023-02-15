@@ -12,7 +12,7 @@ const ProjectsPage = props => {
       <Hero
         other={true}
         bgImg={bgImg}
-        text="projects"
+        text="hero.projects"
       />
       <div className="project">
         <div className="page-container">

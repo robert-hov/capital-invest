@@ -10,7 +10,7 @@ const Language = ({direction}) => {
         setLanguageOpen(!languageOpen)
     }
     const fixLanguage = (language) => {
-        if (language === 'en-US') {
+        if (language === 'en-US' || language === 'en-GB') {
             return 'en'
         } else {
             return language

@@ -1,5 +1,11 @@
 {
-  "hero": "world of luxury living",
+  "hero": {
+    "home": "world of luxury living",
+    "services": "services",
+    "contacts": "contacts",
+    "career": "career",
+    "projects": "projects"
+  },
   "nav": {
     "home": "home",
     "projects": "projects",

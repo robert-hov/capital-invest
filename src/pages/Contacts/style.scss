@@ -127,3 +127,48 @@
     width: 100%;
   }
 }
+
+.contact-smm {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-smm__item {
+  &:not(:last-child) {
+    margin-right: 1.25rem;
+
+    @media (max-width: variables.$small) {
+      margin-right: 0.968rem;
+    }
+  }
+}
+
+.contact-smm__link {
+  position: relative;
+  display: block;
+  width: 2.625rem;
+  opacity: 0.5;
+  transition: opacity 500ms ease;
+
+  text-decoration: none;
+
+  &::before {
+    content: '';
+    display: block;
+    padding-top: 100%;
+  }
+
+  svg {
+    fill: var(--primary-fifth);
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+  @media (max-width: variables.$small) {
+    width: 1.968rem;
+  }
+}

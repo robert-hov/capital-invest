@@ -10,7 +10,7 @@ const CareerPage = (props) => {
   const formRef = useRef();
   return (
     <>
-      <Hero other={true} bgImg={bgImg} text="career" />
+      <Hero other={true} bgImg={bgImg} text="hero.career" />
       <div className="career">
         <div className="page-container">
           <div className="career__container">

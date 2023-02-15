@@ -9,7 +9,7 @@ import {withI18n} from 'react-i18next';
 const ServicePage = ({t}) => {
   return (
     <>
-      <Hero other={true} text="services" bgImg={bgImg} />
+      <Hero other={true} text="hero.services" bgImg={bgImg} />
       <div className="service-page">
         <div className="page-container">
           <div className="service-page__container">

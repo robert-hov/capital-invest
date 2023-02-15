@@ -14,7 +14,7 @@ const Home = (props) => {
       <Hero 
         withIcon={true}
         btnText="our projects"
-        text="Representing the world’s finest real estate"
+        text="hero.home"
         bgImg={homeImg}
       />
       <About />
